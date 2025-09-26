@@ -1,81 +1,98 @@
+/* ==================== GOOGLE FONTS ==================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-*{
+
+/* ==================== GLOBAL STYLES ==================== */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", sans-serif; /* Default font */
 }
-body{
-    background-color: #F1F5F9;
+
+body {
+    background-color: #F1F5F9; /* Light background */
 }
-:root{
-    --primary-color:#1E2382;
-    --normal-text:#344256;
-    --dark-text:#0B0C2E;
-    --accent:#FF6839;
+
+/* ==================== THEME VARIABLES ==================== */
+:root {
+    --primary-color: #1E2382;
+    --normal-text: #344256;
+    --dark-text: #0B0C2E;
+    --accent: #FF6839;
     --gradient: linear-gradient(#1E2382, #00A9C1);
     --background-color: #F1F5F9;
 }
-header.navbar{
+
+/* ==================== NAVBAR ==================== */
+header.navbar {
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
     align-items: center;
-    margin-bottom: 50px ;
+    margin-bottom: 50px;
 }
-.logo{
-    width:15% ;
+
+.logo {
+    width: 15%; /* Logo scales relative to header */
 }
-.help{
-    cursor: pointer;
+
+.help {
+    cursor: pointer; /* Help icon is clickable */
 }
-.container{
+
+/* ==================== MAIN CONTAINER ==================== */
+.container {
     padding-top: 30px;
+    padding-bottom: 40px;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-bottom: 40px;
 }
-h1{
+
+h1 {
     font-weight: 700;
     color: var(--primary-color);
     padding: 10px;
 }
 
-p{
+p {
     font-weight: 400;
     color: var(--normal-text);
 }
-.cards{
+
+/* ==================== CARD SECTION ==================== */
+.cards {
     padding: 40px;
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
+    gap: 1.5rem; /* spacing between cards */
+    flex-wrap: wrap; /* stack on smaller screens */
 }
-.card{
+
+.card {
     border: 1px solid #E2E8F0;
     border-radius: 24px;
-    width: 15rem;
     background-color: white;
     width: 170px;
     height: 141px;
 }
-.card img{
-   width: 100%;
-   height: 100px;
-   max-width: 100px;
-   object-fit: contain;
+
+.card img {
+   width: 100%;        /* scale to card width */
+   max-width: 100px;   /* don't exceed 100px */
+   height: 100px;      /* fixed height for consistency */
+   object-fit: contain; /* keep aspect ratio */
    margin-bottom: 0.5rem;
 }
 
-.card.active{
-    background: var(--gradient);
+.card.active {
+    background: var(--gradient); /* gradient highlight */
     color: white;
     border-color: transparent;
 }
 
-.btn{
+/* ==================== BUTTON ==================== */
+.btn {
     padding: 0.75rem 1.5rem;
     border: none;
     font-size: 1rem;
@@ -84,12 +101,13 @@ p{
     color: white;
     border-radius: 12px;
     width: 275px;
-    
 }
-.btn.disabled{
-    background: #ccc;
-    cursor: not-allowed;
+
+.btn.disabled {
+    background: #ccc;          /* greyed out */
+    cursor: not-allowed;       /* blocked cursor */
 }
-.btn:not(.disabled):hover{
-    background: #023e8a;
+
+.btn:not(.disabled):hover {
+    background: #023e8a;       /* darker hover state */
 }
