@@ -8,7 +8,7 @@ It serves as a **non-framework** implementation of the platform’s core user fl
 
 KYNDA is a multi-user platform with **four roles**:
 - 🧑‍🎓 **Student**
-- 👨‍👩‍👧 **Parent** (This has been suspend, check main group  )
+- 👨‍👩‍👧 **Parent** (This has been suspended, check main group  )
 - 🧑‍🏫 **Tutor**
 - 🧑‍💼 **Admin**
 
