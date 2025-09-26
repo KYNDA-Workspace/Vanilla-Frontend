@@ -19,47 +19,6 @@ This version focuses on:
 4. 🧱 **Reusable Components** – navbar, footer, buttons, etc.
 
 
-## 🗂 Folder Structure
-
-KYNDA-Vanilla-Frontend/
-├─ index.html              # Landing page (user selection)
-│
-├─ assets/                 # Images, logos, icons, fonts
-│   ├─ img/                # Image files
-│   ├─ css/                # Third-party styles (if any)
-│   └─ js/                 # Third-party scripts (if any)
-│
-├─ css/                    # Project-specific styles
-│   ├─ style.css           # Global styles (body, layout, fonts)
-│   ├─ onboarding.css      # Styles for onboarding pages
-│   ├─ dashboard.css       # Styles for dashboards
-│   └─ components.css      # Shared styles (buttons, cards, navbars)
-│
-├─ js/                     # Core JavaScript logic
-│   ├─ app.js              # Handles landing page interactions
-│   ├─ onboarding.js       # Controls multi-step forms, OTP, password reset, etc.
-│   ├─ dashboard.js        # Handles dashboard UI interactions
-│   └─ utils.js            # Helper functions (DOM selection, validation, etc.)
-│
-├─ pages/                  # Standalone HTML pages
-│   ├─ onboarding/
-│   │   ├─ student.html    # Student onboarding form
-│   │   ├─ parent.html     # Parent onboarding form
-│   │   └─ tutor.html      # Tutor onboarding form
-│   │
-│   └─ dashboards/
-│       ├─ student.html    # Student dashboard
-│       ├─ parent.html     # Parent dashboard
-│       ├─ tutor.html      # Tutor dashboard
-│       └─ admin.html      # Admin dashboard
-│
-├─ components/             # Reusable HTML snippets
-│   ├─ navbar.html         # Top navigation bar
-│   └─ footer.html         # Footer section
-│
-└─ README.md               # Project documentation
-
-
 Each team member should **work on their assigned pages** using the following rules:
 
 ### 🧭 1. General Rules
