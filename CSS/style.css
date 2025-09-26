@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+body{
+    background-color: #F1F5F9;
+}
+:root{
+    --primary-color:#1E2382;
+    --normal-text:#344256;
+    --dark-text:#0B0C2E;
+    --accent:#FF6839;
+    --gradient: linear-gradient(#1E2382, #00A9C1);
+    --background-color: #F1F5F9;
+}
+header.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    align-items: center;
+    margin-bottom: 50px ;
+}
+.logo{
+    width:15% ;
+}
+.help{
+    cursor: pointer;
+}
+.container{
+    padding-top: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+h1{
+    font-weight: 700;
+    color: var(--primary-color);
+    padding: 10px;
+}
+
+p{
+    font-weight: 400;
+    color: var(--normal-text);
+}
+.cards{
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.card{
+    border: 1px solid #E2E8F0;
+    border-radius: 24px;
+    width: 15rem;
+    background-color: white;
+    width: 170px;
+    height: 141px;
+}
+.card img{
+   width: 100%;
+   height: 100px;
+   max-width: 100px;
+   object-fit: contain;
+   margin-bottom: 0.5rem;
+}
+
+.card.active{
+    background: var(--gradient);
+    color: white;
+    border-color: transparent;
+}
+
+.btn{
+    padding: 0.75rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 12px;
+    width: 275px;
+    
+}
+.btn.disabled{
+    background: #ccc;
+    cursor: not-allowed;
+}
+.btn:not(.disabled):hover{
+    background: #023e8a;
+}
