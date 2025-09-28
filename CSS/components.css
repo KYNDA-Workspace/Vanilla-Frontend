@@ -1,0 +1,478 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Text Sizes */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-xl: 20px;
+  --text-base-line-height: 24px;
+  --text-base-font-weight-medium: 500;
+  --text-base-font-weight-normal: 400;
+  --text-xl-font-weight-semibold: 600;
+  --text-xl-line-height: 28px;
+}
+/* Styling For Navbar */
+#burgerMenu img {
+  width: 32px;
+  height: 32px;
+}
+#burgerMenu {
+  display: none;
+}
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+header {
+  padding: 36px 100px;
+}
+
+/* Navbar Container and Flex Layout */
+#landingPageNavbar,
+.navLogoContainer,
+.navButtons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Logo Container */
+.navLogoContainer {
+  gap: 12px;
+}
+
+/* Logo Image */
+#navLogo {
+  width: 48px;
+  height: 48px;
+}
+
+/* Logo Text */
+#navLogoText {
+  font-size: 32px;
+  color: #171a62;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+/* Navigation Links Container */
+.navLinkstexts {
+  display: flex;
+}
+
+/* Individual Navigation Link Item */
+.navLinkstexts li {
+  width: max-content;
+  height: max-content;
+  padding: 12px 16px;
+  list-style: none;
+}
+
+/* Navigation Link Anchor and Teach Button Shared Styles */
+.navLinkstexts li a,
+#teachBtn {
+  text-decoration: none;
+  font-size: var(--text-base);
+  line-height: var(--text-base-line-height);
+  font-weight: var(--text-base-font-weight-medium);
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation Link Anchor Color */
+.navLinkstexts li a {
+  color: black;
+}
+
+/* Navbar Buttons Container */
+.navButtons {
+  gap: 8px;
+}
+
+/* Teach Button Styles */
+#teachBtn {
+  width: max-content;
+  height: max-content;
+  padding: 12px 16px;
+  color: #0b0c2e;
+}
+
+/* Login and Signup Button Styles */
+#logInBtn,
+#signUpBtn {
+  width: 92px;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background-color: #f1f5f9;
+  font-size: var(--text-base);
+  font-weight: var(--text-base-font-weight-medium);
+  line-height: var(--text-base-line-height);
+}
+
+/* Signup Button Specific Styles */
+#signUpBtn {
+  background-color: #1e2382;
+  color: white;
+}
+
+/* Styling for collapsed Menu */
+
+#collapsedMenu {
+  position: relative;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 20px;
+  box-shadow: 0 8px 32px rgba(30, 35, 130, 0.18);
+  z-index: 1000;
+  transition: box-shadow 0.3s, transform 0.3s;
+  transform: translateY(-10px);
+  opacity: 0;
+  animation: fadeInMenu 0.4s ease forwards;
+
+  @keyframes fadeInMenu {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  display: none;
+}
+#show {
+  display: block;
+  position: relative;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 20px;
+  box-shadow: 0 8px 32px rgba(30, 35, 130, 0.18);
+  z-index: 1000;
+  transition: box-shadow 0.3s, transform 0.3s;
+  transform: translateY(-10px);
+}
+.navLinkstextsCollapsed {
+  padding-top: 60px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+.navLinkstextsCollapsed a {
+  text-decoration: none;
+  color: black;
+  font-size: var(--text-xl);
+}
+.navActionsCollapsed {
+  display: none;
+  padding-top: 32px;
+}
+.navButtonsCollapsed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.collapsedMenu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Responsive styles for max-width 390px */
+@media (max-width: 1200px) {
+  #burgerMenu {
+    display: block;
+  }
+  .navLinks {
+    display: none;
+  }
+  header {
+    padding: 36px 20px;
+  }
+}
+@media (max-width: 576px) {
+  .navButtons {
+    display: none;
+  }
+}
+
+/* Styling For Footer */
+
+/* Footer Container */
+footer {
+  background: #000a12;
+  color: #fff;
+}
+
+/* Top Section */
+.footerTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 32px 100px;
+}
+
+/* Link Columns */
+.footerLinkContainer {
+  width: 702px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* Left Side: Logo & Contact */
+#sky {
+  width: 538px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+#footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+#footerLogo img {
+  width: 48px;
+  height: 48px;
+}
+#footerLogo h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 28px;
+}
+
+/* Contact Info */
+#contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#contact :first-child {
+  font-size: var(--text-xl);
+  font-weight: var(--text-xl-font-weight-semibold);
+  line-height: var(--text-xl-line-height);
+  color: #fff;
+}
+#contact div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#contact div img {
+  width: 20px;
+  height: 20px;
+}
+#contact div p {
+  color: #abafb1;
+  font-size: var(--text-base);
+  font-weight: var(--text-base-font-weight-medium);
+  line-height: var(--text-base-line-height);
+}
+
+/* Footer Link Sections */
+#quickLinksFooter,
+#resourcesFooter,
+#legalFooter,
+#help {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+#quickLinksFooter ul,
+#resourcesFooter ul,
+#legalFooter ul,
+#help ul {
+  list-style: none;
+}
+#quickLinksFooter ul li,
+#resourcesFooter ul li,
+#legalFooter ul li,
+#help ul li {
+  width: 132px;
+  height: 40px;
+}
+#quickLinksFooter ul a,
+#resourcesFooter ul a,
+#legalFooter ul a,
+#help ul a {
+  text-decoration: none;
+  color: #abafb1;
+  font-size: var(--text-base);
+  font-weight: var(--text-base-font-weight-medium);
+  line-height: var(--text-base-line-height);
+}
+
+/* Bottom Section */
+#footerBottom {
+  display: flex;
+  align-items: center;
+  gap: 260px;
+  padding: 16px 100px;
+}
+
+/* Social Media Logos */
+.footerSocialMediaLogos {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0;
+}
+.footerSocialMediaLogos img {
+  width: 52px;
+  height: 52px;
+}
+
+/* Terms & Copyright */
+.footerTermsContainer {
+  width: 668px;
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+#terms {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#terms a {
+  text-decoration: none;
+}
+.footerTermsContainer p {
+  font-size: var(--text-base);
+  font-weight: var(--text-base-font-weight-normal);
+  line-height: var(--text-base-line-height);
+  color: #abafb1;
+}
+
+/* ------------------- Responsive Footer Styles ------------------- */
+
+/* Tablet breakpoint: stack columns, reduce paddings */
+@media (max-width: 900px) {
+  .footerTop {
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 32px;
+  }
+  .footerLinkContainer {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: flex-start;
+  }
+  #sky {
+    width: 100%;
+    gap: 24px;
+  }
+  #footerLogo h1 {
+    font-size: 28px;
+  }
+  #footerLogo img {
+    width: 40px;
+    height: 40px;
+  }
+  #footerBottom {
+    gap: 40px;
+    padding: 16px 32px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footerTermsContainer {
+    width: 100%;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile breakpoint: single column, minimal paddings, smaller icons/text */
+@media (max-width: 576px) {
+  /* Footer container padding */
+  .footerTop {
+    padding: 24px 12px;
+    gap: 24px;
+  }
+  .footerLinkContainer {
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+  }
+  #sky {
+    width: 100%;
+    gap: 16px;
+  }
+  #footerLogo {
+    gap: 8px;
+  }
+  #footerLogo img {
+    width: 32px;
+    height: 32px;
+  }
+  #footerLogo h1 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  #contact :first-child {
+    font-size: var(--text-base);
+    line-height: var(--text-base-line-height);
+  }
+  #contact div img {
+    width: 16px;
+    height: 16px;
+  }
+  #quickLinksFooter ul li,
+  #resourcesFooter ul li,
+  #legalFooter ul li,
+  #help ul li {
+    width: 100%;
+    height: auto;
+  }
+  #footerBottom {
+    flex-direction: column-reverse;
+    gap: 16px;
+    padding: 12px 8px;
+    align-items: center;
+  }
+  .footerSocialMediaLogos {
+    gap: 8px;
+    padding: 8px 0;
+  }
+  .footerSocialMediaLogos img {
+    width: 32px;
+    height: 32px;
+  }
+  .footerTermsContainer {
+    width: 100%;
+    gap: 8px;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .footerTermsContainer p {
+    font-size: 12px;
+  }
+  .navActionsCollapsed {
+    display: block;
+  }
+}
