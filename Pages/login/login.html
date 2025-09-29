@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kynda Login-tutors and students</title>
+    <link rel="stylesheet" href="../../CSS/login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="placeholder"></div>
+    <div class="login-container">
+      <div class="login-card">
+        <div class="header">
+          <span class="logo-k">K</span>
+          <h2 class="welcome-text">
+            Welcome Back to <span class="kynda-text">Kynda!</span>
+          </h2>
+          <p class="subtitle">Login to your account to continue</p>
+        </div>
+        <div class="">
+          <form class="login-form">
+            <div class="form-group">
+              <label for="email">Email <span>*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@gmail.com"
+                required
+              />
+            </div>
+            <div class="form-group password-group">
+              <label for="password">Password <span>*</span></label>
+              <div class="password-input-wrapper">
+                <input
+                  type="password"
+                  id="password"
+                  value=""
+                  placeholder="create password"
+                  required
+                />
+                <span
+                  class="toggle-password"
+                  onclick="togglePassword('password')"
+                  ><img src="../../assests/login/eyeicon.svg"
+                /></span>
+              </div>
+            </div>
+            <button type="submit" class="login-button">Login</button>
+          </form>
+          <p class="signup-prompt">
+            Don't have an Account? <a href="#" class="signup-link">Sign Up</a>
+          </p>
+        </div>
+        <div class="divider">
+          <span class="or-text">OR</span>
+        </div>
+        <div class="social-login">
+          <a href="#" class="social-icon"
+            ><img src="../../assests/login/google.svg"
+          /></a>
+          <a href="#" class="social-icon"
+            ><img src="../../assests/login/facebook.svg"
+          /></a>
+          <a href="#" class="social-icon"
+            ><img src="../../assests/login/apple.svg"
+          /></a>
+        </div>
+      </div>
+    </div>
+    <script src="../../JS/login.js"></script>
+  </body>
+</html>
