@@ -27,7 +27,7 @@ cards.forEach(card => {
 getStartedBtn.addEventListener("click", () => {
     // Redirect user to the correct onboarding page based on their selection
     if (selectedRole === "student") {
-        window.location.href = "Pages/Onboarding/student.html";  
+        window.location.href = "Pages/Onboarding/StudentOnboarding/student.html";  
     } else if (selectedRole === "tutor") {
         window.location.href = "Pages/Onboarding/tutor.html";
     } else {

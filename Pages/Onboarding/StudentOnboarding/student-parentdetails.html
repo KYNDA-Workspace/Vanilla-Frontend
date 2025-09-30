@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!-- Parent/Guardian Details Form Page for Student Registration -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="student.css">
+    <script src="https://kit.fontawesome.com/8d8e864534.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main id="left-side"></main>
+
+
+    <main id="right-side">
+
+        <!-- Content Box -->
+        <section id="the-box">
+
+            <!-- The Box Header Text -->
+            <div class="form-head">
+                <div class="logo"><img src="images/logo.png" alt="logo"></div>
+                <h2>Parent Details</h2>
+                <p>Enter your parents/guardians details</p>
+            </div>
+
+            <!-- Parent/Guardian Information Collection Form -->
+            <form action="#" id="parentForm" onsubmit="return validateParentForm(event)">
+
+                 <!-- Parent/Guardian Basic Information Section -->
+                  <div>
+                    <label for="fullName">Full Name<span>*</span></label>
+                    <br>
+                    <input type="text" name="full-name" id="fullName" placeholder="Anabel Victoria">
+                    <span class="error-message" id="fullNameError"></span>
+                  </div>
+
+                  <!-- Parent Email -->
+                  <div>
+                    <label for="parentEmail">Parent Email<span>*</span></label>
+                    <br>
+                    <input type="email" name="email-address" id="parentEmail" placeholder="example@gmail.com">
+                    <span class="error-message" id="parentEmailError"></span>
+                  </div>
+
+                  <!-- Parent Unique Number  -->
+                  <div>
+                    <label for="uniqueNumber">Parent Unique Number <span>*</span></label>
+                    <br>
+                    <input type="text" name="unique-number" id="uniqueNumber" placeholder="enter parent unique number">
+                    <span class="error-message" id="uniqueNumberError"></span>
+                  </div>
+
+                  <!-- Phone Number -->
+                  <div>
+                    <label for="parentPhone">Phone Number<span>*</span></label>
+                    <br>
+                    <input type="text" name="phone-number" id="parentPhone" placeholder="🏴‍☠️ +1 908 765 4321">
+                    <span class="error-message" id="parentPhoneError"></span>
+                  </div>
+
+                  <!-- Buttons -->
+                  <div class="button-div2">
+                    <button type="button" onclick="window.location.href='student-qualification.html'" class="previous-btn"><i class="fa-solid fa-less-than"></i> Previous</button>
+                    <button type="submit" class="next-btn">Next <i class="fa-solid fa-greater-than"></i></button>
+                  </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Parent Account Linking Alert Modal -->
+    <!-- Displayed when parent account linking is required -->
+    <section id="parent-alert">
+
+        <div class="alert-card">
+
+            <div class="alert-icon"><img src="images/alert-icon.png" alt=""></div>
+            <h2>Link Parent Account</h2>
+            <p>You are required to link a parent or guardian account. <br> Your parent need to have an account set up already</p>
+            <button onclick="alertButton()">Proceed</button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- JavaScript for Modal Interaction -->
+    <script>
+        // Function to hide the parent account linking alert modal
+        function alertButton() {
+            document.getElementById('parent-alert').style.display = 'none';
+        }
+
+    </script>
+
+    <!-- Include the validation JavaScript file -->
+    <script src="student-form-validation.js"></script>
+</body>
+</html>
