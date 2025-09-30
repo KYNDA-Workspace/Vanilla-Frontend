@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Document Head Section -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kynda Login-tutors and students</title>
+    <!-- Stylesheet Link -->
     <link rel="stylesheet" href="../../CSS/login.css" />
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>
   </head>
   <body>
+    <!-- Page Container -->
     <div class="placeholder"></div>
+    <!-- Main Login Container -->
     <div class="login-container">
       <div class="login-card">
+        <!-- Header Section -->
         <div class="header">
           <span class="logo-k">K</span>
           <h2 class="welcome-text">
@@ -21,8 +26,10 @@
           </h2>
           <p class="subtitle">Login to your account to continue</p>
         </div>
+        <!-- Login Form Section -->
         <div class="">
           <form class="login-form">
+            <!-- Email Input Field -->
             <div class="form-group">
               <label for="email">Email <span>*</span></label>
               <input
@@ -33,6 +40,7 @@
                 required
               />
             </div>
+            <!-- Password Input Field -->
             <div class="form-group password-group">
               <label for="password">Password <span>*</span></label>
               <div class="password-input-wrapper">
@@ -43,35 +51,44 @@
                   placeholder="create password"
                   required
                 />
+                <!-- Password Toggle Button -->
                 <span
                   class="toggle-password"
                   onclick="togglePassword('password')"
-                  ><img src="../../assests/login/eyeicon.svg"
+                  ><img src="../../assests/login/eyeicon.svg" alt="Toggle password visibility"
                 /></span>
               </div>
             </div>
+            <!-- Login Button -->
             <button type="submit" class="login-button">Login</button>
           </form>
+          <!-- Sign Up Link -->
           <p class="signup-prompt">
             Don't have an Account? <a href="#" class="signup-link">Sign Up</a>
           </p>
         </div>
+        <!-- Divider Section -->
         <div class="divider">
           <span class="or-text">OR</span>
         </div>
+        <!-- Social Login Section -->
         <div class="social-login">
+          <!-- Google Login -->
           <a href="#" class="social-icon"
-            ><img src="../../assests/login/google.svg"
+            ><img src="../../assests/login/google.svg" alt="Login with Google"
           /></a>
+          <!-- Facebook Login -->
           <a href="#" class="social-icon"
-            ><img src="../../assests/login/facebook.svg"
+            ><img src="../../assests/login/facebook.svg" alt="Login with Facebook"
           /></a>
+          <!-- Apple Login -->
           <a href="#" class="social-icon"
-            ><img src="../../assests/login/apple.svg"
+            ><img src="../../assests/login/apple.svg" alt="Login with Apple"
           /></a>
         </div>
       </div>
     </div>
+    <!-- Scripts -->
     <script src="../../JS/login.js"></script>
   </body>
 </html>

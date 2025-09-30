@@ -28,12 +28,17 @@ header.navbar {
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
-    align-items: center;
+    /* align-items: center; */
     margin-bottom: 50px;
 }
 
+.navbar div{
+    display: flex;
+    align-items: center;
+}
+
 .logo {
-    width: 15%; /* Logo scales relative to header */
+    width: 100%; /* Logo scales relative to header */
 }
 
 .help {
@@ -74,7 +79,9 @@ p {
     border-radius: 24px;
     background-color: white;
     width: 170px;
-    height: 141px;
+    /* height: 141px; */
+    padding: 20px;
+    cursor: pointer;
 }
 
 .card img {
