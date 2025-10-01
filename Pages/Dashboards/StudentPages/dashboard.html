@@ -3,102 +3,332 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Student Dashboard</title>
     <link rel="stylesheet" href="../../../CSS/dashboard.css">
 </head>
 <body>
-    <header>
-        <!-- NAVBAR -->
-    </header>
+    <header class="category-header">
+  <nav class="links">
+    <ul>
+      <li><a href="#">Sciences</a></li>
+      <li><a href="#">English</a></li>
+      <li><a href="#">Mathematics</a></li>
+      <li><a href="#">Arts</a></li>
+      <li><a href="#">Exam Prep</a></li>
+      <li><a href="#">Literacy</a></li>
+      <li><a href="#">Junior Classes</a></li>
+      <li><a href="#">Senior Classes</a></li>
+      <li><a href="#">WAEC/NECO</a></li>
+      <li><a href="#">JAMB/UTME</a></li>
+    </ul>
+    <div class="filter">
+      <p>Filter</p>
+      <i class="fa-solid fa-filter"></i>
+    </div>
+  </nav>
+</header>
+
      <main>
         <section class="banner">
             <p>Side Banner Here, to be attached later</p>
-            <div class="slider-container">
-        <button class="slider-btn left">&#10094;</button>
-        <div class="slider" id="continue-slider">
-          <!-- Card -->
-          <div class="card">
-            <img src="../../../assests/Studentpages/card-1.png" alt="course" class="course-img">
-            <h3>Mathematics & Physics Class</h3>
-            <div class="progress-bar">
-              <div class="progress" style="width:70%;"></div>
-            </div>
-            <p class="lesson">Lesson 5 of 7</p>
-            <div class="card-footer">
-              <div class="tutor">
-                <img src="../../../assests/Studentpages/profile-img.png" alt="Tutor" class="tutor-img">
-                <div>
-                  <p class="tutor-name">Belrah Mercy ✅</p>
-                  <p class="tutor-role">Science Tutor</p>
-                </div>
-              </div>
-              <button class="continue-btn">Continue</button>
-            </div>
-          </div>
-          <!-- add more cards -->
-            </div>
-        <button class="slider-btn right">&#10095;</button>
-      </div>
         </section>
 
-    <section class="courses">
-         <h2>Courses</h2>
-         <div class="card-container">
-            <!-- Repeat this card 12 times -->
-     <div class="tutor-card">
+        <section class="continue">
+  <!-- Header row -->
+  <div class="section-header">
+    <h2>Pick up from where you stopped</h2>
+    <div class="slider-controls">
+      <button class="slider-btn left">&#10094;</button>
+      <button class="slider-btn right">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- Slider container -->
+  <div class="slider-container">
+    <div class="slider" id="continue-slider">
+      <!-- Card -->
+      <div class="card">
+        <img src="../../../assests/Studentpages/card-1.png" alt="course" class="course-img">
+        <h3>Mathematics & Physics Class</h3>
+        <div class="progress-bar">
+          <div class="progress" style="width:70%;"></div>
+        </div>
+        <p class="lesson">Lesson 5 of 7</p>
+        <div class="card-footer">
+          <div class="tutor">
+            <img src="../../../assests/Studentpages/profile-img.png" alt="Tutor" class="tutor-img">
+            <div>
+              <p class="tutor-name">Belrah Mercy ✅</p>
+              <p class="tutor-role">Science Tutor</p>
+            </div>
+          </div>
+          <button class="continue-btn">Continue</button>
+        </div>
+      </div>
+
+      <!-- Duplicate more .card as needed -->
+    </div>
+  </div>
+</section>
+
+
+   <section class="courses">
+     <h2>Courses</h2>
+  
+  <div class="card-container">
+    <!-- Tutor Card 1 -->
+    <div class="tutor-card">
       <div class="card-image">
         <img src="../../../assests/Studentpages/card-2.png" alt="Tutor session">
         <div class="rating-badge">
-          ⭐ 4.8 <span class="reviews">(321 Reviews)</span>
+          ⭐ 4.8 <br> <span class="reviews">321 Reviews</span>
         </div>
-        <button class="fav-btn">❤️</button>
+        <button class="bookmark"><i class="fa-solid fa-bookmark"></i></button>
+        <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
       </div>
+
       <div class="card-body">
         <div class="card-header">
           <span class="level">Secondary</span>
           <span class="duration">2 weeks</span>
         </div>
-
         <div class="subjects">
           <span>Mathematics</span>
           <span>Physics</span>
           <span>Chemistry</span>
         </div>
-
         <p class="timing">Duration: <strong>45 mins / 60 mins</strong></p>
         <p class="price">Price: <strong>₦1,000 / ₦2,000</strong> per Hour</p>
         <p class="availability">Availability: <strong>Today, 4:30 PM</strong></p>
-
         <div class="tutor-info">
           <img src="../../../assests/Studentpages/profile-img.png" alt="Tutor" class="tutor-avatar">
           <div>
             <p class="tutor-name">Belrah Mercy ✅</p>
             <p class="tutor-role">Science Tutor</p>
           </div>
-          <button class="book-btn">Book Section</button>
+          <button class="book-btn">Book Session</button>
         </div>
       </div>
-     </div>
-     </div>
-    <button class="load-more">Load More</button>
-  </section>
+    </div>
+
+    <!-- Tutor Card 2 -->
+    <div class="tutor-card">
+      <div class="card-image">
+        <img src="../../../assests/Studentpages/card-2.png" alt="Tutor session">
+        <div class="rating-badge">
+          ⭐ 4.9 <br> <span class="reviews">210 Reviews</span>
+        </div>
+        <button class="bookmark"><i class="fa-solid fa-bookmark"></i></button>
+        <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
+      </div>
+      <div class="card-body">
+        <div class="card-header">
+          <span class="level">Senior</span>
+          <span class="duration">1 month</span>
+        </div>
+        <div class="subjects">
+          <span>Biology</span>
+          <span>Chemistry</span>
+        </div>
+        <p class="timing">Duration: <strong>60 mins</strong></p>
+        <p class="price">Price: <strong>₦1,500</strong> per Hour</p>
+        <p class="availability">Availability: <strong>Tomorrow, 2:00 PM</strong></p>
+        <div class="tutor-info">
+          <img src="../../../assests/Studentpages/profile-img.png" alt="Tutor" class="tutor-avatar">
+          <div>
+            <p class="tutor-name">John Doe ✅</p>
+            <p class="tutor-role">Biology Tutor</p>
+          </div>
+          <button class="book-btn">Book Session</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tutor Card 3 -->
+    <div class="tutor-card">
+      <div class="card-image">
+        <img src="../../../assests/Studentpages/card-2.png" alt="Tutor session">
+        <div class="rating-badge">
+          ⭐ 4.7 <br> <span class="reviews">198 Reviews</span>
+        </div>
+        <button class="bookmark"><i class="fa-solid fa-bookmark"></i></button>
+        <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
+      </div>
+      <div class="card-body">
+        <div class="card-header">
+          <span class="level">Secondary</span>
+          <span class="duration">3 weeks</span>
+        </div>
+        <div class="subjects">
+          <span>English</span>
+          <span>Literature</span>
+        </div>
+        <p class="timing">Duration: <strong>40 mins</strong></p>
+        <p class="price">Price: <strong>₦800</strong> per Hour</p>
+        <p class="availability">Availability: <strong>Today, 6:00 PM</strong></p>
+        <div class="tutor-info">
+          <img src="../../../assests/Studentpages/profile-img.png" alt="Tutor" class="tutor-avatar">
+          <div>
+            <p class="tutor-name">Sarah James ✅</p>
+            <p class="tutor-role">English Tutor</p>
+          </div>
+          <button class="book-btn">Book Session</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tutor Card 4 -->
+    <div class="tutor-card">
+      <div class="card-image">
+        <img src="../../../assests/Studentpages/card-2.png" alt="Tutor session">
+        <div class="rating-badge">
+          ⭐ 4.6 <br> <span class="reviews">412 Reviews</span>
+        </div>
+        <button class="bookmark"><i class="fa-solid fa-bookmark"></i></button>
+        <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
+      </div>
+      <div class="card-body">
+        <div class="card-header">
+          <span class="level">Junior</span>
+          <span class="duration">2 weeks</span>
+        </div>
+        <div class="subjects">
+          <span>Basic Science</span>
+          <span>Mathematics</span>
+        </div>
+        <p class="timing">Duration: <strong>30 mins</strong></p>
+        <p class="price">Price: <strong>₦500</strong> per Hour</p>
+        <p class="availability">Availability: <strong>Today, 10:00 AM</strong></p>
+        <div class="tutor-info">
+          <img src="../../../assests/Studentpages/profile-img.png" alt="Tutor" class="tutor-avatar">
+          <div>
+            <p class="tutor-name">Michael Lee ✅</p>
+            <p class="tutor-role">Junior Tutor</p>
+          </div>
+          <button class="book-btn">Book Session</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tutor Card 5 -->
+    <div class="tutor-card">
+      <div class="card-image">
+        <img src="../../../assests/Studentpages/card-2.png" alt="Tutor session">
+        <div class="rating-badge">
+          ⭐ 4.9 <br> <span class="reviews">150 Reviews</span>
+        </div>
+        <button class="bookmark"><i class="fa-solid fa-bookmark"></i></button>
+        <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
+      </div>
+      <div class="card-body">
+        <div class="card-header">
+          <span class="level">Senior</span>
+          <span class="duration">6 weeks</span>
+        </div>
+        <div class="subjects">
+          <span>Economics</span>
+          <span>Accounting</span>
+        </div>
+        <p class="timing">Duration: <strong>50 mins</strong></p>
+        <p class="price">Price: <strong>₦1,200</strong> per Hour</p>
+        <p class="availability">Availability: <strong>Friday, 3:00 PM</strong></p>
+        <div class="tutor-info">
+          <img src="../../../assests/Studentpages/profile-img.png" alt="Tutor" class="tutor-avatar">
+          <div>
+            <p class="tutor-name">Grace Okafor ✅</p>
+            <p class="tutor-role">Commerce Tutor</p>
+          </div>
+          <button class="book-btn">Book Session</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tutor Card 6 -->
+    <div class="tutor-card">
+      <div class="card-image">
+        <img src="../../../assests/Studentpages/card-2.png" alt="Tutor session">
+        <div class="rating-badge">
+          ⭐ 4.8 <br> <span class="reviews">321 Reviews</span>
+        </div>
+        <button class="bookmark"><i class="fa-solid fa-bookmark"></i></button>
+        <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
+      </div>
+      <div class="card-body">
+        <div class="card-header">
+          <span class="level">Secondary</span>
+          <span class="duration">2 weeks</span>
+        </div>
+        <div class="subjects">
+          <span>Mathematics</span>
+          <span>Physics</span>
+          <span>Chemistry</span>
+        </div>
+        <p class="timing">Duration: <strong>45 mins / 60 mins</strong></p>
+        <p class="price">Price: <strong>₦1,000 / ₦2,000</strong> per Hour</p>
+        <p class="availability">Availability: <strong>Today, 4:30 PM</strong></p>
+        <div class="tutor-info">
+          <img src="../../../assests/Studentpages/profile-img.png" alt="Tutor" class="tutor-avatar">
+          <div>
+            <p class="tutor-name">Belrah Mercy ✅</p>
+            <p class="tutor-role">Science Tutor</p>
+          </div>
+          <button class="book-btn">Book Session</button>
+        </div>
+      </div>
+    </div>
+  </div> <!-- ✅ closes card-container -->
+   <div class="load-more-wrapper">
+    <button class="load-more">Load More <i class="fa-solid fa-rotate"></i></button>
+   </div>
+</section>
+
+
 
     <section class="recommended">
-      <h2>Recommended for You</h2>
-      <div class="slider-container">
-        <button class="slider-btn left">&#10094;</button>
-        <div class="slider" id="recommended-slider">
-          <div class="card">
-            <img src="../../../assests/Studentpages/card-3.png" alt="Exam Prep" class="course-img">
-            <h3>Preparing for Science Based JAMB/UTME Exam</h3>
-            <p>₦15,000</p>
-            <button class="view-btn">View More</button>
-          </div>
-          <!-- Repeat more cards -->
-        </div>
-        <button class="slider-btn right">&#10095;</button>
+  <!-- Header row -->
+  <div class="section-header">
+    <h2>Recommended for You</h2>
+    <div class="slider-controls">
+      <button class="slider-btn left">&#10094;</button>
+      <button class="slider-btn right">&#10095;</button>
+    </div>
+  </div>
+
+  <!-- Slider container -->
+  <div class="slider-container">
+    <div class="slider" id="recommended-slider">
+      <!-- Card -->
+     <div class="recommend-card">
+  <div class="card-image">
+    <span class="badge">Sciences</span>
+    <img src="../../../assests/Studentpages/card-3.png" alt="Course Thumbnail">
+  </div>
+  <div class="card-body">
+    <p class="tag">Exam Prep</p>
+    <h3 class="title">Preparing for Science Based JAMB/UTME Exams.</h3>
+
+    <div class="meta">
+      <span><i class="fa-solid fa-clock"></i> 8 Weeks</span>
+      <span><i class="fa-solid fa-graduation-cap"></i> 156 Students Taught</span>
+    </div>
+
+    <!-- pricing + button moved into footer -->
+    <div class="card-footer">
+      <div class="pricing">
+        <span class="old-price">₦100,000</span>
+        <span class="new-price">₦52,000</span>
       </div>
-    </section>
+      <button class="btn">View More</button>
+    </div>
+  </div>
+</div>
+
+      <!-- Duplicate more .recommend-card as needed -->
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer>
