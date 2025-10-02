@@ -373,6 +373,7 @@
   border: 1px solid var(--primary-color);
   align-items: center;
   color: var(--primary-color);
+  border-radius: 12px;
 }
 
 .recommend-card {
