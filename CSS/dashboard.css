@@ -39,7 +39,9 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
-
+.category-header{
+  margin-top: 120px;
+}
 /* ==================== CATEGORY LINKS BAR ==================== */
 .links {
   display: flex;
@@ -153,6 +155,8 @@
   display: flex;
   gap: 1rem;
   transition: transform 0.3s ease-in-out;
+  overflow-x: auto;            /* allow horizontal scroll */
+  scroll-behavior: smooth;     /* smooth scroll */
 }
 
 /* ==================== CONTINUE CARDS ==================== */
@@ -231,11 +235,22 @@
   font-weight: var(--fw-medium);
   transition: background 0.3s, color 0.3s;
 }
+
+.blue{
+  background-color: var(--primary-color);
+  color: white;
+}
+
 .btn:hover,
 .continue-btn:hover,
 .book-btn:hover {
   background: var(--primary-color);
   color: #fff;
+}
+
+.blue:hover {
+  background-color: var(--button-bg);
+  color: var(--primary-color);
 }
 
 /* ==================== COURSE GRID ==================== */
@@ -258,7 +273,7 @@
   width: 100%;
   transition: transform 0.3s ease;
 }
-.tutor-card:hover {
+.tutor-card:hover, .recommend-card:hover, .card:hover, .load-more:hover {
   transform: translateY(-5px);
 }
 
