@@ -1,0 +1,685 @@
+/* ==========================================================================
+   Global CSS Variables
+   Used throughout the application for consistent theming and easy maintenance
+   ========================================================================== */
+:root{
+    --left-backgroung: #C5C8C9;
+    --right-background: #F1F5F9;
+    --primary-button: #1E2382;
+    --secondary-button: #F1F5F9;
+    --border: #E2E8F0;
+    --input-border: #d7d7d7;
+    --the-box-background: #FFF;
+    --link-color: #079EE6;
+    --primary-button-text: #FFF;
+    --text-primary: #344256;
+    --text-secondary: #0F172A;
+    --selected-nav-link: #FF6839;
+    --icon-weight: 600;
+    --text-weight: 500;
+}
+
+/* CSS Reset
+   Ensures consistent styling across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--text-primary);
+    /* background-color: var(--secondary-color); */
+}
+
+
+
+/* ==========================================================================
+   Main Navigation Section
+   Contains logo, search, navigation links, and user profile
+   ========================================================================== */
+
+#nav-sect{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 30px 5%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Section */
+.logo{
+    max-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo img{
+    width: 100%;
+    height: auto;
+}
+
+/* Search Input Container
+   Custom styled search input with icon */
+.search-input{
+    width: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input input{
+    width: 100%;
+    height: 100%;
+    padding: 10px 15px 10px 40px;
+    /* border: 1px solid var(--input-border); */
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    /* color: var(--text-primary); */
+}
+
+.search-input i{
+    position: absolute;
+    top: 35%;
+    left: 15px;
+    font-size: 16px;
+}
+
+.search-input input::placeholder{
+    font-family: 'Inter', sans-serif;
+}
+
+.search-input input:focus{
+    outline: none;
+    box-shadow: 0 0 5px var(--selected-nav-link);
+    transition: 0.3s;
+}
+
+/* ==========================================================================
+   Main Navigation Bar
+   Contains main navigation links with icons
+   ========================================================================== */
+
+
+
+.nav-bar ol{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 8px 0 8px 20px;
+    background: var(--secondary-button);
+    border-radius: 50px;
+}
+
+.nav-bar ol li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-bar ol li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: var(--text-weight);
+    color: var(--text-primary);
+    display: flex;
+    padding: 8px 10px;
+    border-radius: 20px;
+    /* border: 1px solid red; */
+}
+
+.nav-bar ol li a:hover{
+    /* background: var(--the-box-background); */
+    color: var(--selected-nav-link);
+    transition: 0.3s;
+}
+
+.nav-bar ol li i{
+    margin-right: 5px;
+    font-size: 18px;
+    font-weight: var(--icon-weight);
+}
+
+/* Selected Navigation Link
+   - Highlights current active section
+   - Uses accent color and background for emphasis
+   - Applied via #selected-nav-link ID
+ */
+
+#selected-nav-link{
+    color: var(--selected-nav-link);
+    background: var(--the-box-background);
+}
+
+
+/* ==========================================================================
+   User Profile Section
+   Contains favorite, notifications, profile photo and dropdown
+   ========================================================================== */
+
+.profile-toggles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.profile-toggles div i{
+    font-size: 20px;
+    font-weight: var(--icon-weight);
+}
+
+/* Interactive Elements Hover States */
+.profile-toggles div i:hover{
+    color: var(--selected-nav-link);
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.notification-icon:hover,
+.favourite-icon:hover,
+.dropdown-icon:hover {
+    background-color: var(--secondary-button);
+    transition: all 0.3s ease;
+}
+
+
+/* Profile Container
+   - Circular container for profile photo
+   - Includes online status indicator using pseudo-element
+ */
+#profile-container{
+    position: relative;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+#profile-container::after{
+    content: '';
+    position: absolute;
+    left: 65%;
+    top: 65%;
+    width: 40%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    background: #4CAF50;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+#profile-icon{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#profile-icon img{
+    width: 100%;
+    /* height: 100%; */
+    border-radius: 50%;
+    /* height: auto; */
+    object-fit: cover;
+}
+
+.favourite-icon{
+    margin-right: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+/* Notification Icon
+   - Contains notification count badge
+   - Badge uses ::after pseudo-element for count display
+ */
+.notification-icon{
+    position: relative;
+    margin-right: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.notification-icon::after{
+    content: '5';
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    background: #F31260;
+    border-radius: 50%;
+}
+
+
+/* Dropdown Base Styles */
+#notification-content{
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: absolute;
+    right: -50%;
+    top: 150%;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: var(--the-box-background);
+    border: 2px solid var(--border);
+    border-radius: 20px;
+    padding: 20px 20px;
+    width: 450px;
+}
+
+/* #notification-content div{
+    border: 1px solid green;
+} */
+
+.notification-title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.notification-body{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.notification-body .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFF1F1;
+    color: #D00707;
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 55px;
+    height: 50px;
+}
+
+.notification-body .icon2{
+    background: #F6F7F8;
+    color: #1E2382;
+}
+
+.notification-body .icon3{
+    background: #E9FFEA;
+    color: #4CAF50;
+}
+
+
+.text-conainer{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.text-title p{
+    font-size: 12px;
+    color: var(--text-primary);
+}
+
+.text-body{
+    height: 22px;
+    overflow: hidden;
+}
+
+
+
+
+
+.dropdown-icon{
+    position: relative;
+    margin-right: 0;
+    padding: 5px;
+    border-radius: 50%;
+    background: var(--secondary-button);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+#dropdown-content{
+    display: none;
+    z-index: 1000;
+    position: absolute;
+    right: -100%;
+    top: 150%;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: var(--the-box-background);
+    border: 2px solid var(--border);
+    border-radius: 20px;
+    padding: 20px 20px;
+    width: 280px;
+    align-items: center;
+    justify-content: start;
+    font-size: 20px;
+    color: var(--text-primary);
+}
+
+#dropdown-content ol{
+    list-style: none;
+    width: 100%;
+}
+
+
+
+#dropdown-content ol li a{
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: var(--text-weight);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#dropdown-content ol li a:hover{
+    color: var(--selected-nav-link);
+    transition: 0.3s;
+}
+
+#dropdown-content ol li a i{
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: var(--icon-weight);
+}
+
+#selected-dropdown-link{
+    padding-top: 10px;
+    border-top: 2px solid var(--border);
+    color: #ff0000 !important;
+    margin-bottom: 0px !important;
+}
+
+#selected-dropdown-link:hover{
+    color: #D00707 !important;
+    transition: 0.3s;
+}
+
+
+
+
+.notification-button button{
+    width: 100%;
+    padding: 15px 0;
+    background: var(--primary-button);
+    color: var(--primary-button-text);
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+/* Mobile Menu Icon - Hidden by default */
+.mobile-menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-primary);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .mobile-menu-icon {
+        display: block;
+        order: 1;
+    }
+
+    .logo {
+        order: 2;
+    }
+
+    .search-input {
+        display: none;
+    }
+
+    .nav-bar {
+        position: fixed;
+        top: 100px;
+        left: -100%;
+        width: 250px;
+        height: calc(100vh - 80px);
+        background: var(--the-box-background);
+        transition: 0.3s;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-bar.active {
+        left: 0;
+    }
+
+    .nav-bar ol {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        background: none;
+        height: 100%;
+    }
+
+    .nav-bar ol li {
+        margin: 0;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .nav-bar ol li a {
+        width: 100%;
+        padding: 12px 15px;
+    }
+
+    #selected-nav-link {
+        background: var(--secondary-button);
+    }
+
+    .profile-toggles {
+        order: 3;
+    }
+
+    #notification-content {
+        width: 450px;
+        right: -50%;
+    }
+
+    #dropdown-content {
+        width: 250px;
+        right: -50%;
+    }
+}
+
+
+/* Mobile Menu Backdrop */
+.mobile-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-backdrop.active {
+    display: block;
+    opacity: 1;
+}
+
+/*=========================================
+  Mobile Navigation Transitions
+  - Smoothly animates mobile menu open/close
+  - Uses transform for performance
+  - 0.3s duration for optimal UX
+==========================================*/
+.nav-bar {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/*=========================================
+  Mobile Responsive Styles
+  - Triggers at 768px breakpoint
+  - Handles mobile menu layout
+  - Adjusts spacing and sizing for mobile
+==========================================*/
+@media screen and (max-width: 768px) {
+    .mobile-menu-icon {
+        display: block;
+        order: 1;
+    }
+
+    .logo {
+        order: 2;
+    }
+
+    .search-input {
+        display: none;
+    }
+
+    .nav-bar {
+        position: fixed;
+        top: 100px;
+        left: -100%;
+        width: 250px;
+        height: calc(100vh - 80px);
+        background: var(--the-box-background);
+        transition: 0.3s;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-bar.active {
+        left: 0;
+    }
+
+    .nav-bar ol {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        background: none;
+        height: 100%;
+    }
+
+    .nav-bar ol li {
+        margin: 0;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .nav-bar ol li a {
+        width: 100%;
+        padding: 12px 15px;
+    }
+
+    #selected-nav-link {
+        background: var(--secondary-button);
+    }
+
+    .profile-toggles {
+        order: 3;
+    }
+
+    #notification-content {
+        width: 450px;
+        right: -300%;
+    }
+
+    #dropdown-content {
+        width: 250px;
+        right: -50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        max-width: 120px;
+    }
+
+    .nav-bar {
+        top: 95px;
+    }
+
+    .profile-toggles div i {
+        font-size: 18px;
+    }
+
+    #profile-container {
+        width: 30px;
+        height: 30px;
+    }
+
+    #notification-content {
+        width: 350px;
+        right: -350%;
+    }
+
+    #dropdown-content {
+        width: 220px;
+        right: -50%;
+    }
+
+    .favourite-icon,
+    .notification-icon {
+        margin-right: 15px;
+    }
+}
