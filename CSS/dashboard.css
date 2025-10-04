@@ -115,6 +115,12 @@
   font-size: var(--fs-lg);
   font-weight: var(--fw-medium);
 }
+.banner img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* keeps full image visible, no cropping */
+  display: block;
+}
 
 /* ==================== SECTION HEADER ==================== */
 .section-header {
