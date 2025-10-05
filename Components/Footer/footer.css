@@ -1,0 +1,248 @@
+/* ==========================================================================
+   Global CSS Variables
+   Used throughout the application for consistent theming and easy maintenance
+   ========================================================================== */
+:root{
+    --left-backgroung: #C5C8C9;
+    --right-background: #F1F5F9;
+    --primary-button: #1E2382;
+    --secondary-button: #F1F5F9;
+    --border: #E2E8F0;
+    --input-border: #d7d7d7;
+    --the-box-background: #FFF;
+    --link-color: #079EE6;
+    --primary-button-text: #FFF;
+    --text-primary: #344256;
+    --text-secondary: #0F172A;
+    --selected-nav-link: #FF6839;
+    --icon-weight: 600;
+    --text-weight: 500;
+}
+
+/* CSS Reset
+   Ensures consistent styling across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: #ABAFB1;
+    /* background-color: var(--secondary-color); */
+}
+
+
+
+
+
+/* Styling For Footer */
+
+/* Footer Container */
+footer {
+    width: 100%;
+    padding: 50px 5%;
+    background: #000A12;
+}
+
+.footerTop-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+/* .footer-content{
+    border: 2px solid yellow;
+} */
+
+.footer-content .logo {
+    display: flex;
+    align-items: center;
+    max-width: 150px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.footer-content .logo img {
+    width: 100%;
+    height: auto;
+}
+
+.footer-content h4{
+    font-size: 1.5rem;
+    color: var(--primary-button-text);
+    margin-bottom: 35px;
+}
+
+.footer-content p{
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.footerTop-container .box2 p:hover{
+    color: #079EE6;
+    transition: 0.3s ease;
+}
+
+.footer-content p i{
+    color: var(--link-color);
+    margin-right: 5px;
+}
+
+
+/* Bottom Section */
+.footerBottom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+/* Terms & Copyright */
+.footerTermsContainer {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.footerTermsContainer a{
+  text-decoration: none;
+  color: #ABAFB1;
+}
+
+.footerTermsContainer a:hover{
+    color: var(--selected-nav-link);
+    transition: 0.3s ease;
+}
+
+.footerTermsContainer p {
+    color: #abafb1;
+}
+
+
+/* Social Media Logos */
+.footerSocialMediaLogos {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0;
+}
+
+.footerSocialMediaLogos a{
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    color: #ABAFB1;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    border: 2px solid #C5C8C9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerSocialMediaLogos a:hover{
+    background: var(--link-color);
+    color: var(--primary-button-text);
+    border: 2px solid var(--link-color);
+    transition: 0.3s ease;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .footerTop-container {
+        gap: 30px;
+    }
+
+    .footer-content h4 {
+        font-size: 1.3rem;
+    }
+
+    .footer-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footerTop-container {
+        flex-wrap: wrap;
+    }
+
+    .footer-content.box1 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .footer-content:not(.box1) {
+        width: calc(50% - 15px);
+    }
+
+    .footerBottom-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footerTermsContainer {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footerSocialMediaLogos {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        padding: 40px 5%;
+    }
+
+    .footerTop-container {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .footer-content .logo {
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-content h4 {
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+    }
+
+    .footer-content p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .footerBottom-container {
+        margin-top: 30px;
+    }
+
+    .footerTermsContainer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footerTermsContainer p:not(:first-child) {
+        display: none;
+    }
+
+    .footerSocialMediaLogos a {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+}

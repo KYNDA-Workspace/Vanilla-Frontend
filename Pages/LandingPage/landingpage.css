@@ -1,0 +1,1020 @@
+/* ==========================================================================
+   Global CSS Variables
+   Used throughout the application for consistent theming and easy maintenance
+   ========================================================================== */
+:root{
+    --left-backgroung: #C5C8C9;
+    --right-background: #F1F5F9;
+    --primary-button: #1E2382;
+    --secondary-button: #F1F5F9;
+    --border: #E2E8F0;
+    --input-border: #d7d7d7;
+    --the-box-background: #FFF;
+    --link-color: #079EE6;
+    --primary-button-text: #FFF;
+    --text-primary: #344256;
+    --text-secondary: #0F172A;
+    --selected-nav-link: #FF6839;
+    --icon-weight: 600;
+    --text-weight: 500;
+}
+
+/* CSS Reset
+   Ensures consistent styling across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: var(--text-primary);
+    /* background-color: var(--secondary-color); */
+}
+
+
+
+
+
+/* ------- Header Section Starts ------- */
+
+header{
+    width: 100%;
+    /* height: 80vh; */
+    padding: 50px 5%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-text{
+    width: 55%;
+}
+
+.header-text h1{
+    font-size: 4rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.header-text h1 span{
+    color: var(--selected-nav-link);
+}
+
+.header-text p{
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.header-button button{
+    padding: 15px 50px;
+    margin-right: 25px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.header-button button:hover{
+    transform: scale(0.95);
+    transition: 0.3s ease;
+}
+
+.header-button .pry-btn{
+    border: none;
+    background: var(--primary-button);
+    color: var(--primary-button-text);
+}
+
+.header-button .sec-btn{
+    border: 2px solid var(--border);
+    background: var(--secondary-button);
+    color: var(--secondary-button-text);
+}
+
+.header-image{
+    width: 40%;
+}
+
+.header-image img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+/* -------- Header Section Ends ------ */
+
+
+/* ----- Sponsor Section Starts ----- */
+
+#sponsor-sect{
+    width: 100%;
+    padding: 50px 5%;
+}
+
+.sponsor-title{
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--primary-button);
+    margin-bottom: 30px;
+}
+
+.sponsor-logo-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.sponsor-logo-container div{
+    width: 100px;
+    height: 100px;
+}
+
+.sponsor-logo-container div img{
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+}
+/* ----- Sponsor Section Starts ----- */
+
+
+
+
+/* ------ Learning Categories Section Starts ------ */
+
+#learn-cart-sect{
+    width: 100%;
+    padding: 50px 5%;
+}
+
+.learn-cart1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.learn-cart1-text{
+    width: 40%;
+    padding-right: 30px;
+}
+
+.learn-cart1-text h2{
+    font-size: 2.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.learn-cart1-text p{
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    color: var(--text-primary);
+}
+
+.learn-cart1-text button{
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background: var(--primary-button);
+    color: var(--primary-button-text);
+    /* margin-bottom: 30px; */
+}
+
+.learn-cart1-text button:hover{
+    transform: scale(0.95);
+    transition: 0.3s ease;
+}
+
+
+.learn-cart1-images{
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.learn-image-container1{
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.learn-images{
+    width: 100%;
+}
+
+.learn-image-container1 h4{
+    margin-top: 12px;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.learn-images img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+
+.learn-cart2-images{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.learn-image-container2{
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.learn-image-container2 h4{
+    margin-top: 12px;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+}
+/* ------ Learning Categories Section Ends ------ */
+
+
+
+/* How it works Section Starts */
+
+#how-sect{
+    width: 100%;
+    padding: 50px 5%;
+}
+
+.how-title{
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 50px;
+}
+
+.how-title p{
+    margin-top: 20px;
+    color: var(--text-primary);
+}
+
+
+.how-toggle-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.how-toggle-container{
+    /* width: 400px; */
+    /* height: 50px; */
+    border-radius: 50px;
+    padding: 15px 40px;
+    background: var(--secondary-button);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.how-toggle-container button{
+    position: relative;
+    width: 400px;
+    padding: 15px 0px;
+    border: none;
+    border-radius: 40px;
+    background: var(--secondary-button);
+    font-size: 1.05rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+    /* align-items: center; */
+}
+
+.how-toggle-container button::after{
+    content: 'Students';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--link-color);
+    border-radius: 40px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* transition: left 0.3s ease; */
+}
+
+/* .how-toggle-container button:hover::after{
+    left: 50%;
+    transition: 0.5s ease-in-out;
+} */
+
+
+.how-cards-container{
+    width: 100%;
+    display: grid;
+    grid-gap: 33px;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));  
+    grid-template-rows: repeat(2, auto);
+    margin-top: 50px;
+}
+
+.how-card{
+    background: var(--the-box-background);
+    border-radius: 20px;
+    padding: 30px 50px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.how-card .icon{
+    width: 80px;
+    height: 80px;
+    background: var(--link-color);
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.how-card .icon i{
+    font-size: 2rem;
+    color: var(--primary-button-text);
+    padding: 20px;
+}
+
+.how-card h4{
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.how-card p{
+    text-align: center;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+/* ------ How it works Section Ends ------ */
+
+
+
+/* Specialy Built Section Ends */
+#special-sect{
+    width: 100%;
+    padding: 50px 5%;
+}
+
+.special-card-container{
+    width: 100%;
+    display: grid;
+    grid-gap: 33px;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));  
+    grid-template-rows: repeat(2, auto);
+}
+
+.special-card{
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid var(--border);
+    background: var(--secondary-button);
+    text-align: center;
+    /* color: var(--secondary-button-text); */
+}
+
+.special-image{
+    width: 100%;
+    /* height: 200px; */
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.special-image img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.special-card h4{
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+/* Specialy Built Section Ends */
+
+
+
+
+
+/* Select Course Section Starts */
+#select-sect{
+    width: 100%;
+    padding: 50px 5%;
+    border-radius: 50px;
+    background: linear-gradient(90deg, var(--primary-button), var(--link-color));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select-title{
+    width: 40%;
+}
+
+.select-title h1{
+    font-size: 3rem;
+    color: var(--primary-button-text);
+    margin-bottom: 30px;
+}
+
+.select-title button{
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background: var(--selected-nav-link);
+    color: var(--primary-button-text);
+    /* margin-bottom: 30px; */
+}
+
+.select-title button:hover{
+    transform: scale(0.95);
+    transition: 0.3s ease;
+}
+
+.select-image{
+    position: relative;
+    width: 50%;
+    height: 450px;
+}
+
+.select-image .select-image1{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 90%;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.select-image .select-image2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 90%;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+/* Select Course Section Starts */
+
+
+
+/* Choose Kynda Section Starts */
+#choose-sect{
+    width: 100%;
+    padding: 50px 5%;
+    background: var(--right-background);
+}
+
+.how-title span{
+    color: var(--selected-nav-link);
+}
+
+.choose-card-container{
+    width: 100%;
+    display: grid;
+    grid-gap: 33px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-rows: auto;
+    margin-top: 100px;
+}
+/* Choose Kynda Section Ends */
+
+
+
+
+/* Performance Section Starts */
+
+#perfomance-sect{
+    width: 100%;
+    padding: 100px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.perfomance-image{
+    width: 45%;
+    /* border-radius: 20px; */
+    /* box-shadow: 0 6px 18px rgba(0,0,0,0.08); */
+    /* border: 2px solid red; */
+}
+
+.perfomance-image img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.perfomance-text{
+    width: 50%;
+    padding-right: 20px;
+}
+
+.perfomance-text h1{
+    font-size: 2.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.perfomance-text h6{
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+.perfomance-text p{
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.perfomance-text p i{
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+.perfomance-text button{
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background: var(--primary-button);
+    color: var(--primary-button-text);
+    margin-top: 30px;
+}
+
+.perfomance-text button:hover{
+    transform: scale(0.95);
+    transition: 0.3s ease;
+}
+/* Performance Section Ends */
+
+
+/* Testimonial Section Starts */
+
+#testimonial-sect{
+    width: 100%;
+    padding: 100px 5%;
+}
+
+.testimonial-card-container{
+    width: 100%;
+    display: grid;
+    grid-gap: 33px;
+    grid-template-columns: repeat(auto-fit, minmax(330px,1fr));  
+    grid-template-rows: repeat(2, auto);
+}
+
+.testimonial-card{
+    padding: 30px 30px;
+    border-radius: 20px;
+    border: 2px solid var(--border);
+    background: var(--the-box-background);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.testimonial-card .icon{
+    color: #FFA726;
+    margin-bottom: 20px;
+}
+
+.testimonial-card p{
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.testimonial-profile-box{
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-profile-pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.testimonial-profile-pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial-profile-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonial-profile-text h4{
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+}
+
+.testimonial-profile-text p{
+    margin-bottom: 0;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--selected-nav-link);
+}
+/* Testimonial Section Ends */
+
+
+
+/* Frequently Asked Questions Section Starts */
+
+#faq-sect{
+    width: 100%;
+    padding: 100px 5%;
+}
+
+.faq-container{
+    padding: 20px;
+}
+
+.faq-content{
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    background: var(--secondary-button);
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.faq-content h4{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    /* margin-bottom: 20px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-content h4 span{
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.faq-content h4 span .hgi-arrow-up-01{
+    display: none;
+}
+
+.faq-content p{
+    color: var(--text-primary);
+    line-height: 1.4;
+    display: none;
+    margin-top: 20px;
+}
+/* Frequently Asked Questions Section Ends */
+
+
+#join-sect{
+    width: 100%;
+    background-image: url(images/Call\ to\ action.png);
+    background-size: cover;
+}
+
+.join-cover{
+    width: 100%;
+    height: 100%;
+    background: #0f172ac6;
+    padding: 150px 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.join-cover h3{
+    font-size: 2.5rem;
+    color: var(--primary-button-text);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.join-cover p{
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: var(--primary-button-text);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.join-btns{
+    display: flex;
+    align-items: center;
+}
+
+.join-cover button{
+    padding: 15px 50px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+.join-btn-s{
+    margin-left: 20px;
+    background: var(--selected-nav-link);
+    color: var(--primary-button-text);
+}
+
+.join-btn-s:hover{
+    transform: scale(0.95);
+    transition: 0.3s ease;
+}
+
+.join-btn-t{
+    margin-left: 20px;
+    background: #fff;
+    color: #000000;
+}
+
+.join-btn-t:hover{
+    transform: scale(0.95);
+    transition: 0.3s ease;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    /* Header Section */
+    .header-text h1 {
+        font-size: 3.2rem;
+    }
+    .header-text p {
+        font-size: 1.7rem;
+    }
+
+    /* Select Course Section */
+    .select-title h1 {
+        font-size: 2.5rem;
+    }
+    .select-image {
+        height: 400px;
+    }
+
+    /* Special Built Section */
+    .special-card-container {
+        grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    }
+
+    /* How it Works Section */
+    .how-toggle-container button {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Header Section */
+    header {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 100px;
+    }
+    .header-text {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .header-text h1 {
+        font-size: 2.8rem;
+    }
+    .header-text p {
+        font-size: 1.5rem;
+    }
+    .header-image {
+        width: 80%;
+    }
+
+    /* Learning Categories Section */
+    .learn-cart1 {
+        flex-direction: column;
+    }
+    .learn-cart1-text {
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    .learn-cart1-images {
+        width: 100%;
+    }
+    .learn-image-container2 {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+
+    /* Performance Section */
+    #perfomance-sect {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 50px 5%;
+    }
+    .perfomance-image {
+        margin-top: 50px;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+    .perfomance-text {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    /* Select Course Section */
+    #select-sect {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+        margin-top: 100px;
+    }
+    .select-title {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .select-image {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    /* How it Works Section */
+    
+    .how-toggle-container {
+        padding: 10px 20px;
+    }
+    .how-toggle-container button {
+        width: 300px;
+    }
+    .how-card {
+        padding: 20px 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Header Section */
+    header{
+        margin-top: 100px;
+    }
+    .header-text h1 {
+        font-size: 2.2rem;
+    }
+    .header-text p {
+        font-size: 1.2rem;
+    }
+    .header-button button {
+        padding: 12px 30px;
+        margin-right: 15px;
+    }
+    .header-image {
+        width: 100%;
+    }
+
+    /* Sponsor Section */
+    .sponsor-logo-container {
+        justify-content: center;
+    }
+    .sponsor-logo-container div {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Learning Categories */
+    .learn-cart1-text h2 {
+        font-size: 2rem;
+    }
+    .learn-cart1-images{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .learn-image-container2, .learn-image-container1 {
+        width: 100%;
+    }
+    .learn-image-container2 h4 {
+        font-size: 1.2rem;
+    }
+
+    #select-sect{
+        margin-top: 50px;
+    }
+    .select-title h1{
+        font-size: 1.5rem;
+    }
+    .select-image {
+        display: none;
+    }
+
+    /* How it Works */
+    .how-toggle-container button {
+        width: 250px;
+        font-size: 0.9rem;
+    }
+    .how-title h1{
+        font-size: 1.5rem;
+    }
+    .how-title p{
+        font-size: 1rem;
+    }
+    .how-card {
+        padding: 20px;
+    }
+    .how-card .icon {
+        width: 60px;
+        height: 60px;
+    }
+    .how-card .icon i {
+        font-size: 1.5rem;
+    }
+
+    /* Performance Section */
+    .perfomance-text h1 {
+        font-size: 1.5rem;
+    }
+    .perfomance-text h6 {
+        font-size: 1.1rem;
+    }
+    .perfomance-image {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    /* Testimonial Section */
+    .testimonial-card {
+        padding: 20px;
+    }
+    
+    /* FAQ Section */
+    .faq-content {
+        padding: 10px 15px;
+    }
+    .faq-content h4 {
+        font-size: 1rem;
+    }
+
+    /* Join Section */
+    .join-cover {
+        padding: 80px 5%;
+    }
+    .join-cover h3 {
+        font-size: 1.5rem;
+    }
+    .join-cover p {
+        font-size: 1rem;
+    }
+    .join-btns{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .join-cover button {
+        padding: 12px 30px;
+        margin: 10px 0;
+    }
+}
