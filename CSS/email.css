@@ -45,7 +45,10 @@ body {
 /* LAYOUT */
 .left {
   width: 30%;
-  background:var(--left-background-color);
+  background:url(../assests/emailverification.svg/background.png) no-repeat center center;
+   background-size: cover;
+  background-color: #C5C8C9; /* fallback in case image fails to load */
+  height: 100vh;
 }
 .right {
   width: 65%;
