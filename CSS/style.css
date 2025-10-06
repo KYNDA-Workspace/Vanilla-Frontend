@@ -37,10 +37,6 @@ header.navbar {
     align-items: center;
 }
 
-.logo {
-    width: 100%; /* Logo scales relative to header */
-}
-
 .help {
     cursor: pointer; /* Help icon is clickable */
 }
