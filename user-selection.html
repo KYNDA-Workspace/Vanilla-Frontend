@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYNDA - User Selection</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <!-- =================== NAVBAR =================== -->
+    <header class="navbar">
+        <!-- Logo -->
+        <img src="assests/Landing Page/Logo.svg" alt="KYNDA logo" class="logo">
+
+        <!-- Help button -->
+        <a href="#">
+            <img src="assests/Landing Page/help.svg" alt="help button" class="help">
+        </a>
+    </header>
+
+    <!-- =================== MAIN CONTENT =================== -->
+    <main class="container">
+
+        <!-- Page Title -->
+        <h1>Fill the Knowledge Gap with KYNDA!!!</h1>
+        <p>Are you signing up to Kynda as a Student or Tutor?</p>
+
+        <!-- Card Selection Section -->
+        <div class="cards">
+            <!-- Student card -->
+            <div class="card first" data-role="student">
+                <img src="assests/Landing Page/student.png" alt="select student">
+                <h6>I'm Here to Learn</h6>
+            </div>
+
+            <!-- Tutor card -->
+            <div class="card" data-role="tutor">
+                <img src="assests/Landing Page/tutor.png" alt="select tutor">
+                <h6>I'm Here to Teach & Earn</h6>
+            </div>
+        </div>
+
+        <!-- Action button (disabled until a card is selected) -->
+        <button id="get-started" class="btn disabled" disabled>
+            Get Started
+        </button>
+    </main>
+
+    <!-- =================== JAVASCRIPT =================== -->
+    <!-- Handles card selection + redirection -->
+    <script src="JS/app.js"></script>
+</body>
+</html>
