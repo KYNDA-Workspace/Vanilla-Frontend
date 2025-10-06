@@ -482,16 +482,16 @@
 
 
 
+
 /* when scrolled far — fade out */
 #navbar.hide {
   opacity: 0;
   pointer-events: none;
+  transition: transform 0.4s ease;
 }
 
 /* Reset global body color caused by footer.css */
 body {
   color: var(--normal-text) !important; /* or whatever your dashboard text color should be */
 }
-
-
 
