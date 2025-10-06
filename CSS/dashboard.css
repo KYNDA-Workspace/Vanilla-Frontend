@@ -480,36 +480,18 @@
   transition: background-color 0.4s ease, opacity 0.4s ease;
 }
 
-/* when scrolled a bit — solid background */
-#navbar.scrolled {
-  background-color: #ffffff !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  backdrop-filter: none !important;
-}
+
 
 
 /* when scrolled far — fade out */
 #navbar.hide {
   opacity: 0;
   pointer-events: none;
-}
-/* Dashboard-only navbar overrides */
-#navbar nav,
-#navbar header,
-#navbar .navbar,
-#navbar .navbar-container {
-  position: relative !important;
-  top: auto !important;
-  background: transparent !important;
-  z-index: 100;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
-/* Solid background when scrolled */
-#navbar.scrolled nav,
-#navbar.scrolled header,
-#navbar.scrolled .navbar,
-#navbar.scrolled .navbar-container {
-  background: #fff !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+/* Reset global body color caused by footer.css */
+body {
+  color: var(--normal-text) !important; /* or whatever your dashboard text color should be */
 }
+

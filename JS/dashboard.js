@@ -178,40 +178,17 @@ document.addEventListener("scroll", () => {
 
   // 1️⃣ Add white background after small scroll
   if (scrollTop > 100) {
-    navbar.classList.add("scrolled");
+    navbar.classList.add("hide");
   } else {
-    navbar.classList.remove("scrolled");
+    navbar.classList.remove("hide");
   }
 
   // 2️⃣ Hide after halfway
-  if (scrollTop > halfway) {
+  if (scrollTop > 100) {
     navbar.classList.add("hide");
   } else {
     navbar.classList.remove("hide");
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Load components
-  loadComponent("navbar", "../../../Components/studentsnavbar.html");
-  loadComponent("footer", "../../../Components/footer.html");
 
-  // Initialize sliders
-  try {
-    initSliders();
-  } catch (err) {
-    console.error("Slider init error:", err);
-  }
-
-  // === Navbar scroll background behavior ===
-  window.addEventListener("scroll", () => {
-    const navbar = document.getElementById("navbar");
-    if (!navbar) return;
-
-    if (window.scrollY > 50) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  });
-});
