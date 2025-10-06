@@ -1,0 +1,165 @@
+:root{
+  --alert-bgcolor:#E9FFEA;
+  --alert-text-color:#17C964;   /* green for alert only */
+  --left-background-color:#C5C8C9;
+  --right-background-color:#FFFFFF;
+  --opt-box-text:#0B0C2E;
+  --opt-box-bgcolor:#FFFFFF;
+  --email-text-color:#12A150;
+  --option-box-input-color:#344256;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  height: 100vh;
+}
+
+/* ALERT */
+.alert {
+  background:var(--alert-bgcolor);
+  border: 1px solid #badbcc;
+  padding: 5px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  text-align:left;
+  color: var(--alert-text-color); /* ✅ alert text only green */
+  display:grid;
+  grid-template-columns: 1fr 5fr 1fr;
+}
+
+.alert img:first-child {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-top: 2px;
+}
+.alert .close{
+  width:20px;
+  height: 20px;
+  margin-right:50px;
+}
+
+/* LAYOUT */
+.left {
+  width: 30%;
+  background:var(--left-background-color);
+}
+.right {
+  width: 65%;
+  background: var(--right-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.close{
+  cursor: pointer;
+}
+
+/* OTP BOX */
+.otp-box {
+  background:var(--opt-box-bgcolor);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: center;
+}
+.otp-box h2 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color:var(--opt-box-text);
+}
+
+/* ✅ remove green from all <p> in otp-box */
+.otp-box p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: var(--option-box-input-color); /* default neutral text */
+}
+
+/* SPECIFIC TEXTS */
+.subemail-title{
+  text-align:left;
+  margin-top: 0px;
+  color: var(--option-box-input-color);
+}
+.opt-box-input{
+  color: var(--option-box-input-color);
+  font-size: 14px;
+}
+.emailverify{
+  font-size: 12px;
+  color: #344256; /* ✅ neutral gray */
+}
+.verify{
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--opt-box-text); /* ✅ dark title */
+}
+
+/* OTP INPUTS */
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+.otp-inputs input {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s;
+  border-color: #4CAF50;
+}
+.otp-inputs input:focus {
+  border-color: #3b52d2;
+}
+
+/* RESEND */
+.resend {
+  font-size: 14px;
+  margin-top: 8px;
+  color:#009CFF;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+.resend-sec{
+  font-size: 10px;
+  text-decoration: none;
+  color:#6B7280;
+}
+.resend:hover {
+  text-decoration: none; 
+}
+
+/* BUTTON */
+.verify-btn{
+  font-size: 14px;
+  padding: 10px;
+  background-color: #1E2382;
+  margin: 20px auto 0 auto;
+  border-radius: 10px;
+  color: #FFFFFF;
+  border: none;          /* ✅ added to make button look clean */
+  display: block;        /* ✅ center it */
+  width: 100%;           /* optional: full width */
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.verify-btn:hover {
+  background-color: #151963;
+}
+
+/* SUCCESS PAGE */
+.tik-image{
+  margin-bottom: 30px;
+}
