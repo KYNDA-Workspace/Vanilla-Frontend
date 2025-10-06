@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>footer</title>
-    <link rel="stylesheet" href="footer.css">
+    <title>Kynda Contact</title>
+    <link rel="stylesheet" href="landingpage.css">
+    <link rel="stylesheet" href="landing-navbar.css">
+    <link rel="stylesheet" href="../../Components/Footer/footer.css">
     <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
     <script src="https://kit.fontawesome.com/8d8e864534.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +15,87 @@
 </head>
 <body>
 
+    <!---- Navigation Section Starts---->
+    <section id="nav-section">
+
+        <!-- Mobile Menu Button (keeps icon font provided in head) -->
+        <button id="mobile-menu-btn" class="mobile-menu-icon" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="hgi hgi-stroke hgi-menu-02" aria-hidden="true"></i>
+        </button>
+
+        <div class="logo">
+            <img src="images/Logo.png" alt="logo">
+        </div>
+
+        <nav id="primary-nav" aria-hidden="true">
+            <ol>
+                <li><a href="/index.html" class="nav-selected">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">How it Works</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="/Pages/LandingPage/landing-contact.html">Contact Us</a></li>
+                <li class="nav-teach"><a href="" class="teach-link">Teach on Kynda</a></li>
+            </ol>
+        </nav>
+
+        <div class="call-to-action">
+            <button class="login-btn">Login</button>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+
+    </section>
+    <!-- Navigation Section Ends -->
+
+
+
+    <!-- Contact Section Starts -->
+     <section id="contact-sect">
+
+        <div class="how-title">
+            <h2>Get In Touch With Us</h2>
+            <p>Reach out to us with any question or inquiry you have and we'll do our best to get <br> back to you as soon as possible.</p>
+        </div>
+
+        <form action="#" id="contact-form">
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label> 
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone-number">Phone Number</label>
+                <input type="text" id="phone-number" name="phone-number" placeholder="+908 765 4321" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label> 
+                <input type="text" id="subject" name="subject" placeholder="Enquiry" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="10"  placeholder="Hi! We Are Kynda"></textarea>
+            </div>
+
+            <button type="submit" class="contact-btn">Send your Message</button>
+
+        </form>
+
+     </section>
+
+
+
+
+
+
+
+    <!-- Footer Section Starts -->
 
     <footer id="footer-section">
 
@@ -23,7 +106,7 @@
             <div class="footer-content box1">
 
                 <div class="logo">
-                    <img src="../../Components/StudentNavigationBar/images/footerLogo.png" alt="Kynda logo">
+                    <img src="images/footerLogo.png" alt="Kynda logo">
                 </div>
 
                 <h4>Contact</h4>
@@ -34,7 +117,7 @@
             <!-- box 2 -->
             <div class="footer-content box2">
                 <h4>Quick Links</h4>
-                <a href="/index.html"><p>Home</p></a>
+                <p>Home</p>
                 <p>About</p>
                 <p>How it Works</p>
                 <p>For Parentes</p>
@@ -105,6 +188,7 @@
 
 
 
+    <!-- Frequently Ask Question Script -->
     <script>
         // Make each FAQ item toggle independently
         (function(){
@@ -141,20 +225,11 @@
         })();
     </script>
 
-
-
-
-
-
-
+    <script src="JS/main.js"></script>
 
     <!-- ----- JavaScript for Mobile Navigation Toggle ----- -->
-    <script src="navigation-toggle.js"></script>
+    <script src="/Pages/LandingPage/landing-navigation-toggle.js"></script>
 
-
-    <script>
-
-    </script>
 
 </body>
 </html>

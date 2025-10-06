@@ -76,6 +76,11 @@ footer {
     margin-bottom: 35px;
 }
 
+.footer-content a{
+    text-decoration: none;
+    color: #ABAFB1;
+}
+
 .footer-content p{
     font-size: 1.2rem;
     cursor: pointer;

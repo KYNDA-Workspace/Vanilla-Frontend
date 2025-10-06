@@ -716,7 +716,7 @@ header{
 }
 /* Frequently Asked Questions Section Ends */
 
-
+/* Join Section Starts */
 #join-sect{
     width: 100%;
     background-image: url(images/Call\ to\ action.png);
@@ -784,6 +784,77 @@ header{
     transform: scale(0.95);
     transition: 0.3s ease;
 }
+/* Join Section Ends */
+
+
+
+
+/* Contact Section Starts */
+#contact-sect{
+    width: 100%;
+    padding: 100px 5%;
+    margin-top: 100px;
+}
+
+#contact-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.08);
+    border: 2px solid var(--border);
+    border-radius: 50px;
+    padding: 50px;
+}
+
+.form-group{
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.form-group input, .form-group textarea{
+    width: 100%;
+    padding: 15px;
+    background: var(--secondary-button);
+    border: 2px solid var(--input-border);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    /* resize: vertical; */
+}
+
+.form-group input:focus, .form-group textarea:focus{
+    outline: none;
+    border: 2px solid var(--selected-nav-link);
+    transition: 0.3s;
+}
+
+#contact-form button{
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background: var(--primary-button);
+    color: var(--primary-button-text);
+    /* margin-top: 20px; */
+}
+/* Contact Section Ends */
+
+
+
+
+
 
 /* Responsive Styles */
 @media screen and (max-width: 1200px) {

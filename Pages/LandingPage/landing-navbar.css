@@ -95,11 +95,10 @@ nav ol li .nav-selected{
     color: var(--selected-nav-link);
 }
 
-nav ol li .nav-selected:hover {
-    /* background: var(--secondary-button); */
+/* nav ol li .nav-selected:hover {
     text-shadow: 3px 2px 5px var(--text-secondary);
     transition: 0.3s ease;
-}
+} */
 
 .teach-link{
     color: var(--primary-button);
