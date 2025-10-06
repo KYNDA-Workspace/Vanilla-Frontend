@@ -1,188 +1,174 @@
-// Common validation functions
+// ============================================================
+// ✅ Common validation functions
+// ============================================================
 function showError(elementId, message) {
-    document.getElementById(elementId + 'Error').textContent = message;
+  document.getElementById(elementId + 'Error').textContent = message;
 }
 
 function clearErrors() {
-    document.querySelectorAll('.error-message').forEach(msg => msg.textContent = '');
+  document.querySelectorAll('.error-message').forEach(msg => (msg.textContent = ''));
 }
 
 function validateEmail(email) {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailPattern.test(email);
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailPattern.test(email);
 }
 
 function validateRequiredField(value, fieldName, elementId) {
-    if (value.trim() === '') {
-        showError(elementId, `${fieldName} is required`);
-        return false;
-    }
-    return true;
+  if (value.trim() === '') {
+    showError(elementId, `${fieldName} is required`);
+    return false;
+  }
+  return true;
 }
 
-// Signup form validation
+// ============================================================
+// 🧩 Signup form validation
+// ============================================================
 function validateSignupForm(event) {
-    event.preventDefault();
-    let isValid = true;
-    clearErrors();
+  event.preventDefault();
+  let isValid = true;
+  clearErrors();
 
-    // First Name validation
-    const firstName = document.getElementById('firstName').value;
-    if (!validateRequiredField(firstName, 'First name', 'firstName')) {
-        isValid = false;
-    }
+  const firstName = document.getElementById('firstName').value;
+  if (!validateRequiredField(firstName, 'First name', 'firstName')) isValid = false;
 
-    // Last Name validation
-    const lastName = document.getElementById('lastName').value;
-    if (!validateRequiredField(lastName, 'Last name', 'lastName')) {
-        isValid = false;
-    }
+  const lastName = document.getElementById('lastName').value;
+  if (!validateRequiredField(lastName, 'Last name', 'lastName')) isValid = false;
 
-    // Email validation
-    const email = document.getElementById('email').value;
-    if (!validateRequiredField(email, 'Email', 'email')) {
-        isValid = false;
-    } else if (!validateEmail(email)) {
-        showError('email', 'Please enter a valid email address');
-        isValid = false;
-    }
+  const email = document.getElementById('email').value;
+  if (!validateRequiredField(email, 'Email', 'email')) {
+    isValid = false;
+  } else if (!validateEmail(email)) {
+    showError('email', 'Please enter a valid email address');
+    isValid = false;
+  }
 
-    // Phone validation
-    const phone = document.getElementById('phone').value;
-    if (!validateRequiredField(phone, 'Phone number', 'phone')) {
-        isValid = false;
-    }
+  const phone = document.getElementById('phone').value;
+  if (!validateRequiredField(phone, 'Phone number', 'phone')) isValid = false;
 
-    // Password validation
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirmPassword').value;
-    
-    if (!validateRequiredField(password, 'Password', 'password')) {
-        isValid = false;
-    } else if (password.length < 8) {
-        showError('password', 'Password must be at least 8 characters long');
-        isValid = false;
-    }
+  const password = document.getElementById('password').value;
+  const confirmPassword = document.getElementById('confirmPassword').value;
 
-    if (!validateRequiredField(confirmPassword, 'Confirm password', 'confirmPassword')) {
-        isValid = false;
-    } else if (password !== confirmPassword) {
-        showError('confirmPassword', 'Passwords do not match');
-        isValid = false;
-    }
+  if (!validateRequiredField(password, 'Password', 'password')) {
+    isValid = false;
+  } else if (password.length < 8) {
+    showError('password', 'Password must be at least 8 characters long');
+    isValid = false;
+  }
 
-    if (isValid) {
-        window.location.href = 'student-qualification.html';
-    }
+  if (!validateRequiredField(confirmPassword, 'Confirm password', 'confirmPassword')) {
+    isValid = false;
+  } else if (password !== confirmPassword) {
+    showError('confirmPassword', 'Passwords do not match');
+    isValid = false;
+  }
 
-    return false;
+  if (isValid) {
+    window.location.href = 'student-qualification.html';
+  }
+  return false;
 }
 
-// Qualification form validation
+// ============================================================
+// 🧩 Qualification form validation
+// ============================================================
 function validateQualificationForm(event) {
-    event.preventDefault();
-    let isValid = true;
-    clearErrors();
+  event.preventDefault();
+  let isValid = true;
+  clearErrors();
 
-    // School Level validation
-    const schoolLevel = document.getElementById('schoolLevel').value;
-    if (!validateRequiredField(schoolLevel, 'School level', 'schoolLevel')) {
-        isValid = false;
+  const schoolLevel = document.getElementById('schoolLevel').value;
+  if (!validateRequiredField(schoolLevel, 'School level', 'schoolLevel')) isValid = false;
+
+  const dob = document.getElementById('age').value;
+  if (!validateRequiredField(dob, 'Date of Birth', 'age')) {
+    isValid = false;
+  } else {
+    const birthDate = new Date(dob);
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) age--;
+
+    if (age < 8) {
+      showError('age', 'Student must be at least 8 years old');
+      isValid = false;
+    } else if (age > 100) {
+      showError('age', 'Please enter a valid date of birth');
+      isValid = false;
     }
+  }
 
-    // Date of Birth validation
-    const dob = document.getElementById('age').value;
-    if (!validateRequiredField(dob, 'Date of Birth', 'age')) {
-        isValid = false;
-    } else {
-        // Calculate age from date of birth
-        const birthDate = new Date(dob);
-        const today = new Date();
-        let age = today.getFullYear() - birthDate.getFullYear();
-        const monthDiff = today.getMonth() - birthDate.getMonth();
-        
-        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
-            age--;
-        }
-        
-        // Check if age is at least 8 years
-        if (age < 8) {
-            showError('age', 'Student must be at least 8 years old');
-            isValid = false;
-        } else if (age > 100) {
-            showError('age', 'Please enter a valid date of birth');
-            isValid = false;
-        }
-    }
+  const subjects = document.getElementById('subjectInterest').value;
+  if (!validateRequiredField(subjects, 'Subjects of interest', 'subjectInterest')) isValid = false;
 
-    // Subject Interest validation
-    const subjects = document.getElementById('subjectInterest').value;
-    if (!validateRequiredField(subjects, 'Subjects of interest', 'subjectInterest')) {
-        isValid = false;
-    }
+  const lessonType = document.getElementById('preferredLesson').value;
+  if (!validateRequiredField(lessonType, 'Preferred lesson type', 'preferredLesson')) isValid = false;
 
-    // Preferred Lesson validation
-    const lessonType = document.getElementById('preferredLesson').value;
-    if (!validateRequiredField(lessonType, 'Preferred lesson type', 'preferredLesson')) {
-        isValid = false;
-    }
+  const location = document.getElementById('location').value;
+  if (!validateRequiredField(location, 'Location', 'location')) isValid = false;
 
-    // Location validation
-    const location = document.getElementById('location').value;
-    if (!validateRequiredField(location, 'Location', 'location')) {
-        isValid = false;
-    }
+  const struggles = document.getElementById('struggle').value;
+  if (!validateRequiredField(struggles, 'Learning struggles', 'struggle')) isValid = false;
 
-    // Struggles validation
-    const struggles = document.getElementById('struggle').value;
-    if (!validateRequiredField(struggles, 'Learning struggles', 'struggle')) {
-        isValid = false;
-    }
-
-    if (isValid) {
-        window.location.href = 'student-parentdetails.html';
-    }
-
-    return false;
+  if (isValid) {
+    window.location.href = 'student-verify-email.html';
+  }
+  return false;
 }
 
-// Parent Details form validation
-function validateParentForm(event) {
-    event.preventDefault();
-    let isValid = true;
-    clearErrors();
+// ============================================================
+// ✉️ Email Verification Page (OTP Logic + Countdown)
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+  const otpInputs = document.querySelectorAll('#otpForm input');
+  const verifyBtn = document.getElementById('verifyBtn');
+  const countdownEl = document.getElementById('countdown');
+  const resendLink = document.querySelector('.resend');
 
-    // Full Name validation
-    const fullName = document.getElementById('fullName').value;
-    if (!validateRequiredField(fullName, 'Full name', 'fullName')) {
-        isValid = false;
-    }
+  // Auto focus next input
+  otpInputs.forEach((input, index) => {
+    input.addEventListener('input', () => {
+      if (input.value.length === 1 && index < otpInputs.length - 1) {
+        otpInputs[index + 1].focus();
+      }
+    });
+  });
 
-    // Parent Email validation
-    const parentEmail = document.getElementById('parentEmail').value;
-    if (!validateRequiredField(parentEmail, 'Parent email', 'parentEmail')) {
-        isValid = false;
-    } else if (!validateEmail(parentEmail)) {
-        showError('parentEmail', 'Please enter a valid email address');
-        isValid = false;
-    }
+  // Countdown timer
+  if (countdownEl) {
+    let timeLeft = 30;
+    const timer = setInterval(() => {
+      timeLeft--;
+      countdownEl.textContent = timeLeft;
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        resendLink.style.pointerEvents = 'auto';
+        resendLink.style.color = '#17C964';
+        countdownEl.textContent = '0';
+      }
+    }, 1000);
+  }
 
-    // Unique Number validation
-    const uniqueNumber = document.getElementById('uniqueNumber').value;
-    if (!validateRequiredField(uniqueNumber, 'Parent unique number', 'uniqueNumber')) {
-        isValid = false;
-    }
+  // Verify button click
+  if (verifyBtn) {
+    verifyBtn.addEventListener('click', () => {
+      const otpCode = Array.from(otpInputs).map(i => i.value).join('');
+      if (otpCode.length !== 6) {
+        alert('Please enter the full 6-digit code.');
+        return;
+      }
+      window.location.href = 'student-success.html';
+    });
+  }
 
-    // Phone validation
-    const parentPhone = document.getElementById('parentPhone').value;
-    if (!validateRequiredField(parentPhone, 'Phone number', 'parentPhone')) {
-        isValid = false;
-    }
-
-    if (isValid) {
-        // You can add a success redirect or message here
-        alert('Registration completed successfully!');
-    }
-
-    return false;
-}
+  // Go to dashboard on success page
+  const dashboardBtn = document.getElementById('goToDashboardBtn');
+  if (dashboardBtn) {
+    dashboardBtn.addEventListener('click', () => {
+      console.log("Redirecting to dashboard...");
+      window.location.href = "../../Dashboards/StudentPages/dashboard.html";
+    });
+  }
+});

@@ -25,7 +25,10 @@ body{
 
 #left-side{
     width: 30%;
-    background: var(--left-backgroung);
+    background: url(images/student.png) no-repeat center center;
+     background-size: cover;
+  background-color: #C5C8C9; /* fallback in case image fails to load */
+  height: 100vh;
 }
 
 #right-side{
