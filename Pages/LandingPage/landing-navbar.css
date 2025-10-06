@@ -73,7 +73,7 @@ nav ol {
 
 nav ol li {
     display: inline-block;
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 nav ol li a {
@@ -87,7 +87,7 @@ nav ol li a {
 
 nav ol li a:hover {
     /* background: var(--secondary-button); */
-    text-shadow: 3px 2px 5px var(--selected-nav-link);
+    color: var(--selected-nav-link);
     transition: 0.3s ease;
 }
 
