@@ -65,9 +65,13 @@ function validateSignupForm(event) {
   }
 
   if (isValid) {
-    window.location.href = 'student-qualification.html';
-  }
-  return false;
+  // ✅ Save the email for later pages
+  const emailInput = document.getElementById('email').value.trim();
+  localStorage.setItem('studentEmail', emailInput);
+
+  // ✅ Redirect to qualification page
+  window.location.href = 'student-qualification.html';
+}
 }
 
 // ============================================================
@@ -127,6 +131,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const countdownEl = document.getElementById('countdown');
   const resendLink = document.querySelector('.resend');
 
+  // ✅ Display saved email on OTP page
+  const savedEmail = localStorage.getItem('studentEmail');
+  if (savedEmail) {
+    const emailDisplay = document.querySelector('.subemail-title strong');
+    if (emailDisplay) emailDisplay.textContent = savedEmail;
+  }
+
+
   // Auto focus next input
   otpInputs.forEach((input, index) => {
     input.addEventListener('input', () => {
@@ -152,16 +164,24 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Verify button click
-  if (verifyBtn) {
-    verifyBtn.addEventListener('click', () => {
-      const otpCode = Array.from(otpInputs).map(i => i.value).join('');
-      if (otpCode.length !== 6) {
-        alert('Please enter the full 6-digit code.');
-        return;
-      }
-      window.location.href = 'student-success.html';
-    });
-  }
+ // Verify button click
+if (verifyBtn) {
+  verifyBtn.addEventListener('click', () => {
+    const otpCode = Array.from(otpInputs).map(i => i.value).join('');
+
+    if (otpCode.length !== 6) {
+      alert('Please enter the full 6-digit code.');
+      return;
+    }
+
+    // ✅ Clear saved email after successful verification
+    localStorage.removeItem('studentEmail');
+
+    // ✅ Redirect to success page
+    window.location.href = 'student-success.html';
+  });
+}
+
 
   // Go to dashboard on success page
   const dashboardBtn = document.getElementById('goToDashboardBtn');
