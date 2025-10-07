@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Kynda - Signup Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../CSS/onboarding.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">K</div>
+        <h1>Welcome to Kynda</h1>
+        <p class="lead">Create a <a href="#">Kynda Student</a>account to get started</p>
+      </header>
+
+      <form autocomplete="off" onsubmit="event.preventDefault()">
+        <div class="grid">
+          <div class="field">
+            <label class="label-asterisk">First Name</label>
+            <input class="input" type="text" placeholder="Anabel">
+          </div>
+
+          <div class="field">
+            <label class="label-asterisk">Last Name</label>
+            <input class="input" type="text" placeholder="Mercy">
+          </div>
+
+          <div class="field">
+            <label class="label-asterisk">Email Address</label>
+            <input class="input" type="email" placeholder="example@gmail.com">
+          </div>
+
+          <div class="field">
+            <label class="label-asterisk">Phone Number</label>
+            <div class="phone-wrap input" style="height: 56px; padding: 8px 14px;">
+              <div class="phone-row">
+                <img class="flag" src="../../assests/Landing Page/united-states-of-america-flag-png-large.png" alt="US Flag">
+                <input style="border: 0; outline: none; background: transparent; font-size: 15px; width: 100%;" placeholder="+1 908 76 4321">
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="field full">
+            <label class="label-asterisk">Password</label>
+            <div class="Password-row">
+              <input class="input long-input" id="pwd" type="password" placeholder="create password">
+              <button type="button" class="eye" onclick="togglePassword()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 5C7 5 3.2 8.2 1.5 12cl.7 3.8 5.5 7 10.5 7s8.8-3.2 10.5-7C20.8 8.2 17 5 12 5z" stroke="#7b8794" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="12" cy="12" r="3" stroke="#7b8794" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="field full">
+            <label class="label-asterisk">Confirm Password</label>
+            <div class="Password-row">
+              <input class="input long-input" id="pwd2" type="password" placeholder="Confirm your Password">
+              <button type="button" class="eye" onclick="toggleConfirm()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 5C7 5 3.2 8.2 1.5 12cl.7 3.8 5.5 7 10.5 7s8.8-3.2 10.5-7C20.8 8.2 17 5 12 5z" stroke="#7b8794" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                   <circle cx="12" cy="12" r="3" stroke="#7b8794" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="cta">
+          <button class="btn" type="submit">Get Started</button>
+          <div class="small">Already have an account?<a href="#">Login</a></div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+  
