@@ -1,0 +1,396 @@
+/* ==========================================================================
+   Global CSS Variables
+   Used throughout the application for consistent theming and easy maintenance
+   ========================================================================== */
+:root{
+    --left-backgroung: #C5C8C9;
+    --right-background: #F1F5F9;
+    --primary-button: #1E2382;
+    --secondary-button: #F1F5F9;
+    --border: #E2E8F0;
+    --input-border: #d7d7d7;
+    --the-box-background: #FFF;
+    --link-color: #079EE6;
+    --primary-button-text: #FFF;
+    --text-primary: #344256;
+    --text-secondary: #0F172A;
+    --selected-nav-link: #FF6839;
+    --icon-weight: 600;
+    --text-weight: 500;
+}
+
+/* CSS Reset
+   Ensures consistent styling across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: var(--text-primary);
+    /* background-color: var(--secondary-color); */
+}
+
+
+/* ------------------ Navigation Section Starts ------------------ */
+#nav-section {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--the-box-background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure navbar is above other content */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    max-width: 150px;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* nav {
+    border: 2px solid green;
+} */
+
+nav ol {
+    list-style-type: none;
+}
+
+nav ol li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ol li a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: var(--text-weight);
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+nav ol li a:hover {
+    /* background: var(--secondary-button); */
+    color: var(--selected-nav-link);
+    transition: 0.3s ease;
+}
+
+nav ol li .nav-selected{
+    color: var(--selected-nav-link);
+}
+
+/* nav ol li .nav-selected:hover {
+    text-shadow: 3px 2px 5px var(--text-secondary);
+    transition: 0.3s ease;
+} */
+
+.teach-link{
+    color: var(--primary-button);
+    font-weight: var(--text-weight);
+    text-decoration: none;
+}
+
+.nav-teach{
+    margin-left: 0px;
+}
+
+.call-to-action{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.call-to-action a{
+    text-decoration: none;
+    text-align: center;
+    color: var(--primary-button);
+    font-weight: var(--text-weight);
+    font-size: 1rem;
+}
+
+.call-to-action a:hover{
+    text-shadow: 3px 2px 5px #FF6839;
+    transition: 0.3s ease;
+}
+
+.call-to-action button {
+    padding: 15px 20px;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    cursor: pointer;
+}
+
+.login-btn{
+    background: var(--secondary-button);
+    color: var(--primary-button);
+    border: 2px solid var(--border);
+}
+
+.signup-btn{
+    background: var(--primary-button);
+    color: var(--primary-button-text);
+    border: none;
+}
+
+.call-to-action button:hover{
+    transform: scale(0.95);
+    transition: 0.3s ease;
+}
+/* ------------------ Navigation Section Ends ------------------ */
+
+
+
+
+
+
+
+
+
+
+
+/* Show the mobile menu button */
+    .mobile-menu-icon{
+        display: none; /* Hidden by default, shown on small screens */
+    }
+
+
+/* ------------------ Responsive Navbar ------------------ */
+
+/* Tablet: ensure call-to-action remains visible and nav stays horizontal */
+@media screen and (max-width: 1200px){
+
+    /* Show the mobile menu button */
+    .mobile-menu-icon{
+        display: inline-flex;
+        align-items: center;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        color: var(--text-primary);
+        font-size: 22px;
+        margin-right: 8px;
+    }
+
+    .logo{
+        max-width: 120px;
+    }
+
+    /* Hide the horizontal nav; make the nav a vertical dropdown */
+    nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--the-box-background);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 280ms ease;
+        z-index: 900;
+    }
+
+    /* When aria-hidden is false, expand the dropdown */
+    nav[aria-hidden="false"]{
+        max-height: 500px; /* adjusts to content height */
+    }
+
+    nav ol{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px 18px;
+    }
+
+    nav ol li{
+        display: block;
+        margin-right: 0;
+    }
+
+    /* Keep call-to-action visible in mobile/tablet by moving its display to be inline */
+    .call-to-action{
+        display: flex;
+        gap: 12px;
+    }
+
+    .call-to-action a{ 
+        font-size: 0.95rem; 
+    }
+
+    /* Make buttons fit better on small screens */
+    .call-to-action button{
+        padding: 10px 14px;
+        border-radius: 12px;
+    }
+
+    /* Hide the teach link from header area on mobile since it's now in nav list */
+    .nav-teach{ 
+        display: block;
+        margin-left: 0px;
+    }
+    .teach-link{ display: block; }
+}
+
+
+
+
+
+/* Show hamburger and convert nav to dropdown on small screens */
+
+@media screen and (max-width: 768px){
+    header{
+        padding: 14px 2%;
+    }
+
+    /* Show the mobile menu button */
+    .mobile-menu-icon{
+        display: inline-flex;
+        align-items: center;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        color: var(--text-primary);
+        font-size: 22px;
+        margin-right: 8px;
+    }
+
+    /* Hide the horizontal nav; make the nav a vertical dropdown */
+    nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--the-box-background);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 280ms ease;
+        z-index: 900;
+    }
+
+    /* When aria-hidden is false, expand the dropdown */
+    nav[aria-hidden="false"]{
+        max-height: 500px; /* adjusts to content height */
+    }
+
+    nav ol{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px 18px;
+    }
+
+    nav ol li{
+        display: block;
+        margin-right: 0;
+    }
+
+    /* Keep call-to-action visible in mobile/tablet by moving its display to be inline */
+    .call-to-action{
+        display: flex;
+        gap: 12px;
+    }
+
+    .call-to-action a{ 
+        font-size: 0.95rem; 
+    }
+
+    /* Make buttons fit better on small screens */
+    .call-to-action button{
+        padding: 10px 14px;
+        border-radius: 12px;
+    }
+
+    /* Hide the teach link from header area on mobile since it's now in nav list */
+    .nav-teach{ display: block; }
+    .teach-link{ display: block; }
+}
+
+
+
+
+
+@media screen and (max-width: 480px){
+    /* Show the mobile menu button */
+    .mobile-menu-icon{
+        display: inline-flex;
+        align-items: center;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        color: var(--text-primary);
+        font-size: 22px;
+        margin-right: 8px;
+    }
+
+    /* Hide the horizontal nav; make the nav a vertical dropdown */
+    nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--the-box-background);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 280ms ease;
+        z-index: 900;
+    }
+
+    /* When aria-hidden is false, expand the dropdown */
+    nav[aria-hidden="false"]{
+        max-height: 500px; /* adjusts to content height */
+    }
+
+    nav ol{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 14px 18px;
+    }
+
+    nav ol li{
+        display: block;
+        margin-right: 0;
+    }
+
+    /* Keep call-to-action visible in mobile/tablet by moving its display to be inline */
+    .call-to-action{
+        display: flex;
+        gap: 12px;
+    }
+
+    .call-to-action a{ 
+        font-size: 0.95rem; 
+    }
+
+    /* Make buttons fit better on small screens */
+    .call-to-action button{
+        padding: 10px 14px;
+        border-radius: 12px;
+    }
+
+    /* Hide the teach link from header area on mobile since it's now in nav list */
+    .nav-teach{ display: block; }
+    .teach-link{ display: block; }
+}

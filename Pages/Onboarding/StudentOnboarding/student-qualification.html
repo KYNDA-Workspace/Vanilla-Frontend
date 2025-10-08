@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- Student Qualification and Learning Preferences Form -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="student.css">
+    <script src="https://kit.fontawesome.com/8d8e864534.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main id="left-side"></main>
+
+
+    <main id="right-side">
+
+        <!-- Content Box -->
+        <section id="the-box">
+
+            <!-- The Box Header Text -->
+            <div class="form-head">
+                <div class="logo"><img src="images/logo.png" alt="logo"></div>
+                <h2>Enrollment Details</h2>
+                <p>Tell us your learning preferences and details</p>
+            </div>
+
+            <!-- Student Information Form with Learning Details -->
+            <form action="student-verify-email.html" id="qualificationForm" onsubmit="return validateQualificationForm(event)">
+
+                <!-- Basic Academic Information Section: School Level & Age -->
+                <div class="form-div">
+                    <div class="input-div">
+                        <label for="school-level">School Level<span>*</span></label>
+                        <br>
+                        <!-- select input -->
+                        <select name="school-level" id="schoolLevel">
+                            <option value="">Select school level</option>
+                            <option value="Primary">Primary</option>
+                            <option value="Secondary">Secondary</option>
+                            <option value="Exam Prep">Exam Prep</option>
+                            <option value="Tertiary">Tertiary</option>
+                        </select>
+                        <span class="error-message" id="schoolLevelError"></span>
+                    </div>
+
+                    <div class="input-div">
+                        <label for="age">Date of Birth<span>*</span></label>
+                        <br>
+                        <input type="date" name="age" id="age" placeholder="min of 8years">
+                        <span class="error-message" id="ageError"></span>
+                    </div>
+                </div>
+
+                <!-- Learning Preferences Section: Subject Interests & Lesson Type -->
+                 <div class="form-div">
+                    <div class="input-div">
+                        <label for="subject-interest">Subjects of Interest<span>*</span></label>
+                        <br>
+                        <input type="text" name="subject-interest" id="subjectInterest" placeholder="list all">
+                        <span class="error-message" id="subjectInterestError"></span>
+                    </div>
+
+                    <div class="input-div">
+                        <label for="preferredLesson">Preferred Lesson Type<span>*</span></label>
+                        <br>
+                        <!-- select input -->
+                        <select name="preferred-lesson" id="preferredLesson">
+                            <option value="">Select lesson type</option>
+                            <option value="quick help">Quick Help</option>
+                            <option value="structured tutoring">Structured Tutoring</option>
+                            <option value="exam prep">Exam Prep</option>
+                        </select>
+                        <span class="error-message" id="preferredLessonError"></span>
+                    </div>
+                 </div>
+
+                 <!-- Geographic Information Section: Student Location -->
+                  <div>
+                    <label for="location">location<span>*</span></label>
+                    <br>
+                    <input type="text" name="location" id="location" placeholder="type in or pin your location">
+                    <span class="error-message" id="locationError"></span>
+                  </div>
+
+                  <!-- Learning Assessment Section: Student Challenges and Needs -->
+                  <div>
+                    <label for="struggle">Your Struggles<span>*</span></label>
+                    <br>
+                    <textarea name="struggle" id="struggle" rows="6" placeholder="Explain your learning struggles in details and explain how you need help"></textarea>
+                    <span class="error-message" id="struggleError"></span>
+                  </div>
+
+                  <!-- Buttons -->
+                  <div class="button-div2">
+                    <button type="button" onclick="window.location.href='student.html'" class="previous-btn"><i class="fa-solid fa-less-than"></i> Previous</button>
+                    <button type="submit" class="next-btn">Next <i class="fa-solid fa-greater-than"></i></button>
+                  </div>
+
+            </form>
+
+        </section>
+
+    </main>
+    
+    <!-- Include the validation JavaScript file -->
+    <script src="student-form-validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- Student Sign Up Page for Kynda Learning Platform -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="student.css">
+    <script src="https://kit.fontawesome.com/8d8e864534.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Left side panel - reserved for background/image/design -->
+    <main id="left-side"></main>
+
+    <!-- Right side panel - contains the main form content -->
+    <main id="right-side">
+
+        <!-- Content Box -->
+        <section id="the-box">
+
+            <!-- The Box Header Text -->
+            <div class="form-head">
+                <div class="logo"><img src="images/logo.png" alt="logo"></div>
+                <h2>Welcome to Kynda</h2>
+                <p>create a <span>kynda student</span> account to get started</p>
+            </div>
+
+            <form action="student-qualification.html" id="signupForm" onsubmit="return validateSignupForm(event)">
+
+                <!-- First & Last Name -->
+                <div class="form-div">
+                    <div class="input-div">
+                        <label for="firstName">First Name*</label>
+                        <br>
+                        <input type="text" name="first-name" id="firstName" placeholder="Anabel">
+                        <span class="error-message" id="firstNameError"></span>
+                    </div>
+
+                    <div class="input-div">
+                        <label for="lastName">Last Name*</label>
+                        <br>
+                        <input type="text" name="last-name" id="lastName" placeholder="Mercy">
+                        <span class="error-message" id="lastNameError"></span>
+                    </div>
+                </div>
+
+                <!-- Email & Phone Number -->
+                 <div class="form-div">
+                    <div class="input-div">
+                        <label for="email">Email Address*</label>
+                        <br>
+                        <input type="email" name="email-address" id="email" placeholder="example@gmail.com">
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="input-div">
+                        <label for="phone">Phone Number<span>*</span></label>
+                        <br>
+                        <input type="text" name="phone-number" id="phone" placeholder="🏴‍☠️ +1 908 765 4321">
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+                 </div>
+
+                 <!-- Password -->
+                  <div>
+                    <label for="password">Password<span>*</span></label>
+                    <br>
+                    <input type="password" name="password" id="password" placeholder="create password">
+                    <span class="error-message" id="passwordError"></span>
+                  </div>
+
+                  <!-- Confirm Password -->
+                  <div>
+                    <label for="confirmPassword">Confirm Password<span>*</span></label>
+                    <br>
+                    <input type="password" name="confirm-password" id="confirmPassword" placeholder="confirm your password">
+                    <span class="error-message" id="confirmPasswordError"></span>
+                  </div>
+
+                  <!-- Button & Login link -->
+                   <div class="button-div">
+                    <button type="submit">Get Started</button>
+                    <p>Already have an account? <a href="#">Login</a></p>
+                   </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Include the validation JavaScript file -->
+    <script src="student-form-validation.js"></script>
+</body>
+</html>

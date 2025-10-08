@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTP Verification</title>
+  <link rel="stylesheet" href="../../../CSS/email.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Source+Sans+3:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="left"></div>
+  <div class="right"> 
+    <div class="otp-box" id="otpScreen">
+      <div class="alert">
+        <div><img src="../../../assests/emailverification.svg/tick-circle.svg" alt="Success"></div>
+        <div>
+          <div>Email</div>
+          <p class="subemail-title">We’ve sent a 6-digit code to <strong>Behraj3@gmail.com</strong>. Please enter the code to continue.</p>
+        </div>
+        <div><img class="close" src="../../../assests/emailverification.svg/close-circle.svg" alt="Close"></div>
+      </div>
+      
+      <h2>One-Time Password Verification</h2>
+      <p class="opt-box-input">Please input the code that was sent to your mobile phone or email address.</p>
+
+      <form class="otp-inputs" id="otpForm">
+        <input type="text" inputmode="numeric" maxlength="1">
+        <input type="text" inputmode="numeric" maxlength="1">
+        <input type="text" inputmode="numeric" maxlength="1">
+        <input type="text" inputmode="numeric" maxlength="1">
+        <input type="text" inputmode="numeric" maxlength="1">
+        <input type="text" inputmode="numeric" maxlength="1">
+      </form>
+
+      <!-- ✅ Verify Button -->
+      <button type="button" class="verify-btn" id="verifyBtn">Verify</button>
+
+      <!-- ✅ Countdown under Resend -->
+      <div class="resend-btn">
+        Haven’t received your verification code?<br>
+        <a class="resend" href="#">Resend Code</a>
+        <p class="resend-sec">Resend available in <span id="countdown">30</span>s</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="student-form-validation.js"></script>
+</body>
+</html>

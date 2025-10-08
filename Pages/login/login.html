@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Document Head Section -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kynda Login-tutors and students</title>
+    <!-- Stylesheet Link -->
+    <link rel="stylesheet" href="../../CSS/login.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Page Container -->
+    <div class="placeholder">
+      <img src="../../assests/login/anyone.jpg" alt="hero image" />
+    </div>
+    <!-- Main Login Container -->
+    <div class="login-container">
+      <div class="login-card">
+        <!-- Header Section -->
+        <div class="header">
+          <img
+            src="../../assests/login/Logo.svg"
+            alt="Kynda Logo"
+            class="logo-image"
+          />
+          <h2 class="welcome-text">
+            Welcome Back to <span class="kynda-text">Kynda!</span>
+          </h2>
+          <p class="subtitle">Login to your account to continue</p>
+        </div>
+        <!-- Login Form Section -->
+        <div class="">
+          <form class="login-form" id="login-form" novalidate>
+            <!-- Email Input Field -->
+            <div class="form-group">
+              <label for="email">Email <span>*</span></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@gmail.com"
+              />
+              <p class="error-message" id="email-error" aria-live="polite"></p>
+            </div>
+            <!-- Password Input Field -->
+            <div class="form-group password-group">
+              <label for="password">Password <span>*</span></label>
+              <div class="password-input-wrapper">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  value=""
+                  placeholder="enter password"
+                />
+                <!-- Password Toggle Button -->
+                <span class="toggle-password" id="toggle-password"
+                  ><img
+                    src="../../assests/login/eyeicon.svg"
+                    alt="Toggle password visibility"
+                /></span>
+              </div>
+              <p
+                class="error-message"
+                id="password-error"
+                aria-live="polite"
+              ></p>
+            </div>
+            <!-- Login Button -->
+            <button type="submit" class="login-button" id="login-button">
+              Login
+            </button>
+          </form>
+          <!-- Sign Up Link -->
+          <p class="signup-prompt">
+            Don't have an Account?
+            <a href="../../user-selection.html" class="signup-link">Sign Up</a>
+          </p>
+          <!-- Forgot Password Link -->
+          <div class="forgot-password-container">
+            <a
+              href="../Onboarding/resetpassword.html"
+              class="forgot-password-link"
+              >Forgot Password?</a
+            >
+          </div>
+        </div>
+        <!-- Divider Section -->
+        <div class="divider">
+          <span class="or-text">OR</span>
+        </div>
+        <!-- Social Login Section -->
+        <div class="social-login">
+          <!-- Google Login -->
+          <a href="#" class="social-icon"
+            ><img src="../../assests/login/google.svg" alt="Login with Google"
+          /></a>
+          <!-- Facebook Login -->
+          <a href="#" class="social-icon"
+            ><img
+              src="../../assests/login/facebook.svg"
+              alt="Login with Facebook"
+          /></a>
+          <!-- Apple Login -->
+          <a href="#" class="social-icon"
+            ><img src="../../assests/login/apple.svg" alt="Login with Apple"
+          /></a>
+        </div>
+      </div>
+    </div>
+    <!-- Toast container -->
+    <div id="toast-container"></div>
+    <!-- Scripts -->
+    <script src="../../JS/login.js"></script>
+  </body>
+</html>

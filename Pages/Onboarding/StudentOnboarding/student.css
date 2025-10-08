@@ -1,0 +1,487 @@
+/* Global CSS Variables */
+:root{
+    /* Color palette definition for consistent theming */
+    --left-backgroung: #C5C8C9;
+    --right-background: #F1F5F9;
+    --primary-button: #1E2382;
+    --secondary-button: #F1F5F9;
+    --border: #E2E8F0;
+    --input-border: #d7d7d7;
+    --the-box-background: #FFF;
+    --link-color: #079EE6;
+    --primary-button-text: #FFF;
+}
+
+/* CSS Reset - ensures consistent box sizing */
+*{
+    box-sizing: border-box;
+}
+
+/* Main body layout - uses flex for side-by-side panel design */
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+#left-side {
+  width: 30%;
+  background: url(images/student.png) no-repeat center center;
+  background-size: cover;
+  background-color: #C5C8C9;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#right-side {
+  width: 70%;
+  margin-left: 30%;
+  overflow-y: auto;       /* ✅ scrolls independently */
+  background: var(--right-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 80px 20px 100px;
+}
+
+
+
+/* Content Box */
+#the-box{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    gap: 30px;
+    border-radius: 24px;
+    background: var(--the-box-background);
+    box-shadow: 0 0 45px 0 rgba(112, 144, 176, 0.12);
+}
+
+
+/* The Box Header Text */
+.form-head{
+    display: flex;
+    padding-bottom: 8px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-head .logo{
+    width: 40px;
+    height: 48px;
+    padding-bottom: 8px;
+}
+
+.form-head .logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.form-head h2{
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    margin: 0px;
+}
+
+.form-head p{
+    color: #344256;
+    font-size: 13px;
+    margin: 4px 0px 0px 0px;
+}
+
+.form-head span{
+    color: #FF6839;
+}
+
+
+
+/* Form contents */
+/* Form Layout - Vertical stack with consistent spacing */
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+
+form div{
+    width: 100%;
+}
+
+/* Two-column form layout for paired input fields */
+.form-div{
+    display: flex;
+    gap: 16px;
+}
+
+form label{
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+form label span{
+    color: red;
+}
+
+/* Input field styling - Consistent look across all form inputs */
+form input{
+    width: 100%;
+    min-height: 32px;
+    border: 2px solid var(--input-border);
+    border-radius: 12px;
+    padding: 11px 10px;
+    margin-top: 12px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+}
+
+form input::placeholder{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #FF0000;
+    font-size: 12px;
+    margin-top: 4px;
+    display: block;
+    font-family: "Inter", sans-serif;
+}
+
+/* Error state for input fields */
+input:invalid {
+    border-color: #FF0000;
+}
+
+/* Qualification html has this part */
+/* Form Input Elements Styling */
+/* Select dropdown - matches input styling for consistency */
+form select{
+    width: 100%;
+    min-height: 32px;
+    border: 2px solid var(--input-border);
+    border-radius: 12px;
+    padding: 11px 10px;
+    margin-top: 12px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+}
+
+/* Textarea - for multi-line input fields */
+form textarea{
+    width: 100%;
+    min-height: 32px;
+    border: 2px solid var(--input-border);
+    border-radius: 12px;
+    padding: 11px 10px;
+    margin-top: 12px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+}
+
+/* Student Information CSS has this part */
+/* Primary action button styling - Full width with brand colors */
+
+.button-div button{
+    width: 100%;
+    padding: 15px 0;
+    background: var(--primary-button);
+    color: var(--primary-button-text);
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.button-div p{
+    text-align: center;
+    margin: 10px;
+}
+
+.button-div p a{
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+
+/* Multi-step Form Navigation */
+/* Container for Previous/Next navigation buttons */
+.button-div2{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.button-div2 .previous-btn{
+    padding: 15px 15px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    border: 2px solid var(--input-border);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* Icon spacing for previous button */
+.button-div2 .previous-btn i{
+    margin-right: 10px;
+}
+
+.button-div2 .next-btn{
+    padding: 15px 15px;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    background: var(--primary-button);
+    color: var(--primary-button-text);
+    border: 2px solid var(--input-border);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.button-div2 .next-btn i{
+    margin-left: 10px;
+}
+
+
+/* Parent Details html has this part */
+/* Modal Overlay */
+/* Semi-transparent overlay for parent account linking alert */
+#parent-alert{
+    width: 100%;
+    height: 120vh;
+    background: #34425655;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+}
+
+/* Modal Content Card */
+/* Centered white card containing alert message and action button */
+.alert-card{
+    background: #FFF;
+    border-radius: 20px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Alert Icon Container */
+/* Circular container with semi-transparent warning background */
+.alert-icon{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffa82647;
+    /* border: 2px solid red; */
+}
+
+.alert-icon img{
+    width: 85%;
+    object-fit: center;
+}
+
+.alert-card h2{
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.alert-card p{
+    font-size: 14px;
+    text-align: center;
+    color: #344256;
+    margin-bottom: 30px;
+}
+
+.alert-card button{
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 15px;
+    border: none;
+    background: var(--primary-button);
+    color: var(--primary-button-text);
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+}
+/* =========================================
+   📱 RESPONSIVENESS FIX (Updated)
+   ========================================= */
+
+/* ✅ Fixed Tablet Layout (768px–1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  body {
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden; /* lock body scroll */
+  }
+
+  #left-side {
+    width: 40%; /* visible image section */
+    height: 100vh; /* ensure full height */
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+  }
+
+  #right-side {
+    width: 60%;
+    height: 100vh;
+    margin-left: 40%;
+    background: var(--right-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 24px;
+    overflow-y: auto; /* ✅ allows scrolling for long forms */
+  }
+
+  #the-box {
+    width: 90%;
+    max-width: 520px;
+    background: var(--the-box-background);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 0 35px rgba(0,0,0,0.08);
+    margin-top: 40px;
+    margin-bottom: 40px; /* ✅ prevents content cutoff */
+  }
+
+  .form-div {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  form input,
+  form select,
+  form textarea {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .form-head h2 {
+    font-size: 22px;
+  }
+
+  .form-head p {
+    font-size: 14px;
+  }
+}
+
+
+/* ✅ For mobile phones (<768px): hide left side completely */
+@media (max-width: 767px) {
+  body {
+    flex-direction: column;
+    height: auto;
+    overflow-y: auto; /* ✅ allow full scrolling */
+  }
+
+  #left-side {
+    display: none; /* hide background/image section */
+  }
+
+  #right-side {
+    width: 100%;
+    margin-left: 0;
+    padding: 60px 20px;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto; /* ✅ ensures form scrolls properly */
+  }
+
+  #the-box {
+    width: 95%;
+    max-width: 500px;
+    padding: 24px;
+  }
+
+  .form-head h2 {
+    font-size: 20px;
+  }
+
+  .form-head p {
+    font-size: 13px;
+  }
+
+  form {
+    gap: 12px;
+  }
+
+  .form-div {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  form input,
+  form select,
+  form textarea {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .button-div2 {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .previous-btn,
+  .next-btn {
+    width: 100%;
+  }
+
+  .logo img {
+    width: 36px;
+    height: 42px;
+  }
+}
+
+/* ✅ Extra small phones (<480px) */
+@media (max-width: 480px) {
+  #the-box {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .form-head h2 {
+    font-size: 18px;
+  }
+
+  .form-head p {
+    font-size: 12px;
+  }
+
+  form label {
+    font-size: 14px;
+  }
+
+  form input,
+  form select,
+  form textarea {
+    font-size: 14px;
+    padding: 9px;
+  }
+
+  .button-div2 button {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
