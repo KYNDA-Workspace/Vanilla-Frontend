@@ -90,17 +90,35 @@ body{
   flex: 1;
   padding: 2rem;
 }
+.welcome-img{
+  display: flex;
+  align-items: center;
+
+  display: inline-block;
+  width: 120%;
+  
+  
+  margin: 0 1%;
+  padding: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  vertical-align: top;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 .topbar{
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
+  align-items: center;
+ 
 }
-.status-buttons span{
+.status-buttons{
   border-radius: 20px;
   padding: 0.4rem 0.8rem;
   font-size: 0.8rem;
   margin-left: 0.5rem;
+ 
 }
 .subscription.active{
   background: #dcfce7;
