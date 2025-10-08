@@ -321,3 +321,167 @@ form textarea{
     font-family: "Inter", sans-serif;
     cursor: pointer;
 }
+/* =========================================
+   📱 RESPONSIVENESS FIX (Updated)
+   ========================================= */
+
+/* ✅ Fixed Tablet Layout (768px–1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  body {
+    flex-direction: row;
+    height: 100vh;
+    overflow: hidden; /* lock body scroll */
+  }
+
+  #left-side {
+    width: 40%; /* visible image section */
+    height: 100vh; /* ensure full height */
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+  }
+
+  #right-side {
+    width: 60%;
+    height: 100vh;
+    margin-left: 40%;
+    background: var(--right-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 24px;
+    overflow-y: auto; /* ✅ allows scrolling for long forms */
+  }
+
+  #the-box {
+    width: 90%;
+    max-width: 520px;
+    background: var(--the-box-background);
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 0 35px rgba(0,0,0,0.08);
+    margin-top: 40px;
+    margin-bottom: 40px; /* ✅ prevents content cutoff */
+  }
+
+  .form-div {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  form input,
+  form select,
+  form textarea {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .form-head h2 {
+    font-size: 22px;
+  }
+
+  .form-head p {
+    font-size: 14px;
+  }
+}
+
+
+/* ✅ For mobile phones (<768px): hide left side completely */
+@media (max-width: 767px) {
+  body {
+    flex-direction: column;
+    height: auto;
+    overflow-y: auto; /* ✅ allow full scrolling */
+  }
+
+  #left-side {
+    display: none; /* hide background/image section */
+  }
+
+  #right-side {
+    width: 100%;
+    margin-left: 0;
+    padding: 60px 20px;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto; /* ✅ ensures form scrolls properly */
+  }
+
+  #the-box {
+    width: 95%;
+    max-width: 500px;
+    padding: 24px;
+  }
+
+  .form-head h2 {
+    font-size: 20px;
+  }
+
+  .form-head p {
+    font-size: 13px;
+  }
+
+  form {
+    gap: 12px;
+  }
+
+  .form-div {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  form input,
+  form select,
+  form textarea {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .button-div2 {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .previous-btn,
+  .next-btn {
+    width: 100%;
+  }
+
+  .logo img {
+    width: 36px;
+    height: 42px;
+  }
+}
+
+/* ✅ Extra small phones (<480px) */
+@media (max-width: 480px) {
+  #the-box {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .form-head h2 {
+    font-size: 18px;
+  }
+
+  .form-head p {
+    font-size: 12px;
+  }
+
+  form label {
+    font-size: 14px;
+  }
+
+  form input,
+  form select,
+  form textarea {
+    font-size: 14px;
+    padding: 9px;
+  }
+
+  .button-div2 button {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
