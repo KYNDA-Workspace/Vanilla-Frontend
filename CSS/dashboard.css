@@ -495,3 +495,256 @@ body {
   color: var(--normal-text) !important; /* or whatever your dashboard text color should be */
 }
 
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* 🌐 TABLETS (768px – 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  :root {
+    --section-padding: 2rem 3rem;
+    --section-padding-sm: 1rem 2rem;
+  }
+
+  /* ✅ Make page scroll vertically */
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  /* ✅ Responsive banner */
+  .banner {
+    height: auto;
+    padding: 1.5rem 0;
+  }
+
+  .banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* ✅ 2-column grid that gracefully drops to 1 when not enough space */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+  }
+
+  /* ✅ Continue & Recommended sliders show 2 cards per view */
+  .continue .card,
+  .recommended .recommend-card {
+    width: calc(50% - 0.75rem);
+    flex: 0 0 calc(50% - 0.75rem);
+  }
+
+  .section-header {
+    padding: 1.5rem 2rem;
+  }
+
+  .slider-container {
+    padding: 1rem 2rem;
+  }
+}
+
+/* 📱 MOBILE (<=767px) */
+@media (max-width: 767px) {
+  :root {
+    --section-padding: 1rem 1.5rem;
+    --section-padding-sm: 0.5rem 1rem;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto; /* ✅ allow scrolling vertically */
+  }
+
+  /* ✅ Keep banner visible but responsive */
+  .banner {
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .banner img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* ✅ Grid: 2 columns on mobile, auto scale to 1 if space is too small */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  /* ✅ Continue and Recommended sliders show 2 cards per view */
+  .continue .card,
+  .recommended .recommend-card {
+    width: calc(50% - 0.5rem);
+    flex: 0 0 calc(50% - 0.5rem);
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .slider-container {
+    padding: 0 1rem;
+  }
+
+  .card,
+  .recommend-card {
+    font-size: 0.85rem;
+  }
+}
+
+/* ==================== EXTRA SMALL MOBILE: <=480px ==================== */
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 0.75rem 1rem;
+    --section-padding-sm: 0.5rem 0.75rem;
+  }
+
+  body {
+    overflow-y: auto; /* allow vertical scrolling */
+  }
+
+  .banner {
+    height: auto;
+  }
+
+  .banner img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* General adjustments */
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem 1rem;
+  }
+
+  .section-header h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ✅ Course grid: 2 per row down to 375px, then 1 per row below that */
+  .card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .card {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .tutor-name {
+    font-size: 0.7rem;
+  }
+
+  .tutor-role,
+  .lesson {
+    font-size: 0.65rem;
+  }
+
+  .btn,
+  .continue-btn,
+  .book-btn {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  /* ✅ Continue slider: horizontal scroll */
+  .continue .slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 0.75rem;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .continue .slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .continue .card {
+    flex: 0 0 75%;
+    max-width: 240px;
+    padding: 0.7rem;
+    font-size: 0.8rem;
+    scroll-snap-align: start;
+  }
+
+  /* ✅ Recommended slider: horizontal scroll */
+  .recommended .slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 0.75rem;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .recommended .slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .recommended .recommend-card {
+    flex: 0 0 75%;
+    max-width: 240px;
+    padding: 0.7rem;
+    font-size: 0.8rem;
+    scroll-snap-align: start;
+  }
+
+  .recommended .title {
+    font-size: 0.9rem;
+  }
+
+  .recommended .meta {
+    font-size: 0.7rem;
+  }
+
+  .recommended .card-footer .new-price,
+  .recommended .card-footer .old-price {
+    font-size: 0.75rem;
+  }
+
+  .slider-container {
+    padding: 0 0.5rem;
+  }
+}
+
+/* ✅ Super small phones (<=375px): single-column fallback */
+@media (max-width: 375px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .continue .slider .card,
+  .recommended .slider .recommend-card {
+    flex: 0 0 90%;
+    max-width: 220px;
+  }
+}
+
+
+
+
