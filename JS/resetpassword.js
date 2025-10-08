@@ -159,11 +159,12 @@ resetForm.addEventListener("submit", async (e) => {
     try {
         submitBtn.disabled = true;
         submitBtn.textContent = "Processing...";
-
+        const urlParams = new URLSearchParams(window.location.search);
+        const token = urlParams.get("token");
         const res = await fetch(`${API_URL}/api/auth/reset-password`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ token, password: newPassword }),
+            body: JSON.stringify({ token, newPassword }),
         });
         const data = await res.json();
         if (res.ok) {
@@ -184,6 +185,7 @@ resetForm.addEventListener("submit", async (e) => {
 document.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search);
     const token = urlParams.get("token");
+    // console.log("Token found:", token);
     if (token) {
         // User clicked the link in email → go to reset password screen
         goToScreen("resetPasswordScreen");
