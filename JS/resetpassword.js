@@ -48,18 +48,6 @@ document.querySelectorAll(".toggle-password").forEach((button) => {
         input.type = input.type === "password" ? "text" : "password";
     });
 });
-// BACK LINK HANDLER
-document.querySelector('.back-link').addEventListener('click', (e) => {
-    e.preventDefault();
-    const token = new URLSearchParams(window.location.search).get('token');
-
-    if (token) {
-        window.location.href = "../../Pages/Onboarding/login.html";
-    } else {
-        // User in same flow → go back to forgot password screen
-        goToScreen('forgotPasswordScreen');
-    }
-});
 //FORGOT PASSWORD FLOW
 const forgotPasswordForm = document.getElementById("forgotPasswordForm");
 const emailError = document.getElementById("email-error");
@@ -133,10 +121,6 @@ resendEmailBtn.addEventListener("click", async () => {
 const resetForm = document.getElementById("resetPasswordForm");
 const urlParams = new URLSearchParams(window.location.search);
 const token = urlParams.get("token");
-// If visiting reset page without token
-if (!token && window.location.pathname.includes("resetpassword")) {
-    showToast("Invalid or expired reset link", "error");
-}
 resetForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     const newPassword = document.getElementById("newPassword").value.trim();
@@ -192,5 +176,13 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         // Default entry → show forgot password screen
         goToScreen("forgotPasswordScreen");
+    }
+    //Only show this message if we're on reset screen and there's no token
+    if (window.location.pathname.includes("resetpassword") && !token) {
+        // Optional: only show if resetPasswordScreen is visible
+        const resetScreen = document.getElementById("resetPasswordScreen");
+        if (resetScreen && resetScreen.classList.contains("active")) {
+            showToast("Invalid or expired reset link", "error");
+        }
     }
 });
