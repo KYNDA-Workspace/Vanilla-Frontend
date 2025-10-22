@@ -23,7 +23,11 @@
       <div class="login-card">
         <!-- Header Section -->
         <div class="header">
-          <span class="logo-k">K</span>
+          <img
+            src="../../assests/login/logo.svg"
+            alt="Kynda Logo"
+            class="logo-image"
+          />
           <h2 class="welcome-text">
             Welcome Back to <span class="kynda-text">Kynda!</span>
           </h2>
@@ -31,7 +35,7 @@
         </div>
         <!-- Login Form Section -->
         <div class="">
-          <form class="login-form">
+          <form class="login-form" id="login-form" novalidate>
             <!-- Email Input Field -->
             <div class="form-group">
               <label for="email">Email <span>*</span></label>
@@ -40,8 +44,8 @@
                 id="email"
                 name="email"
                 placeholder="example@gmail.com"
-                required
               />
+              <p class="error-message" id="email-error" aria-live="polite"></p>
             </div>
             <!-- Password Input Field -->
             <div class="form-group password-group">
@@ -50,26 +54,32 @@
                 <input
                   type="password"
                   id="password"
+                  name="password"
                   value=""
-                  placeholder="create password"
-                  required
+                  placeholder="enter password"
                 />
                 <!-- Password Toggle Button -->
-                <span
-                  class="toggle-password"
-                  onclick="togglePassword('password')"
+                <span class="toggle-password" id="toggle-password"
                   ><img
                     src="../../assests/login/eyeicon.svg"
                     alt="Toggle password visibility"
                 /></span>
               </div>
+              <p
+                class="error-message"
+                id="password-error"
+                aria-live="polite"
+              ></p>
             </div>
             <!-- Login Button -->
-            <button type="submit" class="login-button">Login</button>
+            <button type="submit" class="login-button" id="login-button">
+              Login
+            </button>
           </form>
           <!-- Sign Up Link -->
           <p class="signup-prompt">
-            Don't have an Account? <a href="#" class="signup-link">Sign Up</a>
+            Don't have an Account?
+            <a href="../../user-selection.html" class="signup-link">Sign Up</a>
           </p>
           <!-- Forgot Password Link -->
           <div class="forgot-password-container">
@@ -103,6 +113,8 @@
         </div>
       </div>
     </div>
+    <!-- Toast container -->
+    <div id="toast-container"></div>
     <!-- Scripts -->
     <script src="../../JS/login.js"></script>
   </body>

@@ -264,5 +264,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+  // ✅ Go to Dashboard button (on success page)
+  const dashboardBtn = document.getElementById('goToDashboardBtn');
+  if (dashboardBtn) {
+    dashboardBtn.addEventListener('click', () => {
+      // Redirect student to dashboard page
+      window.location.href = "../../Dashboards/StudentPages/dashboard.html"; // 🔁 change this if your dashboard file has a different name or path
+    });
+  }
 
 
