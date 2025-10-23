@@ -21,6 +21,16 @@ function validateRequiredField(value, fieldName, elementId) {
   }
   return true;
 }
+// Show toast message
+function showToast(message, type = "info") {
+  const toastContainer = document.getElementById("toast-container");
+  const toast = document.createElement("div");
+  toast.className = `toast ${type}`;
+  toast.textContent = message;
+  toastContainer.appendChild(toast);
+
+  setTimeout(() => toast.remove(), 3500);
+}
 
 // ============================================================
 // 🧩 Signup form validation
@@ -31,11 +41,15 @@ function validateSignupForm(event) {
   clearErrors();
 
   const firstName = document.getElementById('firstName').value.trim();
-  const lastName  = document.getElementById('lastName').value.trim();
-  const email     = document.getElementById('email').value.trim();
-  const phone     = document.getElementById('phone').value.trim();
-  const password  = document.getElementById('password').value;
+  const lastName = document.getElementById('lastName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const password = document.getElementById('password').value;
   const confirmPassword = document.getElementById('confirmPassword').value;
+  const getStartedButton = document.querySelector('.get-started');
+
+  getStartedButton.disabled = true;
+  getStartedButton.textContent = "Getting Started...";
 
   if (!validateRequiredField(firstName, 'First name', 'firstName')) isValid = false;
   if (!validateRequiredField(lastName, 'Last name', 'lastName')) isValid = false;
@@ -62,8 +76,11 @@ function validateSignupForm(event) {
     showError('confirmPassword', 'Passwords do not match');
     isValid = false;
   }
-
-  if (!isValid) return false;
+  if (!isValid) {
+    getStartedButton.disabled = false;
+    getStartedButton.textContent = "Get Started";
+    return false;
+  }
 
   const formData = { firstName, lastName, email, phone, password, confirmPassword };
 
@@ -75,7 +92,6 @@ function validateSignupForm(event) {
     .then(async res => {
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || "Signup failed");
-
       // try several common response shapes to locate ID
       const studentId =
         (data.student && data.student._id) ||
@@ -91,7 +107,11 @@ function validateSignupForm(event) {
     })
     .catch(err => {
       console.error("Signup error:", err);
-      alert(err.message || "Signup failed. Please try again.");
+      showToast(err.message || "Signup failed. Please try again.", "error");
+
+    }).finally(() => {
+      getStartedButton.disabled = false;
+      getStartedButton.textContent = "Get Started";
     });
 
   return false;
@@ -112,6 +132,10 @@ function validateQualificationForm(event) {
   const lessonType = document.getElementById('preferredLesson').value;
   const location = document.getElementById('location').value.trim();
   const struggles = document.getElementById('struggle').value.trim();
+  const nextBtn = document.querySelector(".next-btn")
+
+  nextBtn.disabled = true;
+  nextBtn.textContent = "Submitting...";
 
   if (!validateRequiredField(schoolLevel, 'School level', 'schoolLevel')) isValid = false;
 
@@ -138,11 +162,14 @@ function validateQualificationForm(event) {
   if (!validateRequiredField(location, 'Location', 'location')) isValid = false;
   if (!validateRequiredField(struggles, 'Learning struggles', 'struggle')) isValid = false;
 
-  if (!isValid) return false;
-
+  if (!isValid) {
+    nextBtn.disabled = false;
+    nextBtn.textContent = "Next";
+    return false;
+  }
   const studentId = localStorage.getItem("studentId");
   if (!studentId) {
-    alert("Missing studentId. Please complete page 1 again.");
+    showToast("Missing studentId. Please complete page 1 again.", "error");
     window.location.href = "student.html";
     return false;
   }
@@ -165,16 +192,19 @@ function validateQualificationForm(event) {
   })
     .then(async res => {
       const data = await res.json();
+      showToast(data.message, "success")
       if (!res.ok) throw new Error(data.message || "Qualification submission failed");
       window.location.href = "student-verify-email.html";
     })
     .catch(err => {
       console.error("Page 2 error:", err);
-      alert(err.message || "Submission failed. Please try again.");
-    });
+      showToast(err.message || "Submission failed. Please try again.", "error");
+    }).finally(() => {
+      nextBtn.disabled = false;
+      nextBtn.textContent = "Next"
+    })
+};
 
-  return false;
-}
 
 
 
@@ -221,16 +251,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // ✅ Verify button click
   if (verifyBtn) {
     verifyBtn.addEventListener('click', async () => {
+      verifyBtn.disabled = true;
+      verifyBtn.textContent = "Verifying...";
       const otpCode = Array.from(otpInputs).map(i => i.value).join('');
       const savedEmail = localStorage.getItem('studentEmail');
 
       if (!savedEmail) {
-        alert("Email not found. Please start signup again.");
+        showToast("Email not found. Please start signup again.", "error");
+        verifyBtn.disabled = false;
+        verifyBtn.textContent = "Verify";
         return;
       }
 
       if (otpCode.length !== 6) {
-        alert('Please enter the full 6-digit code.');
+        showToast('Please enter the full 6-digit code.');
+        verifyBtn.disabled = false;
+        verifyBtn.textContent = "Verify";
         return;
       }
 
@@ -249,28 +285,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = await response.json();
 
         if (response.ok) {
-          alert("Email verified successfully!");
+          showToast("Email verified successfully!", "success");
           localStorage.removeItem('studentEmail');
           window.location.href = 'student-success.html';
         } else {
-          alert(data.message || "Verification failed. Please try again.");
+          showToast(data.message || "Verification failed. Please try again.", "error");
         }
       } catch (error) {
         console.error("Verification error:", error);
-        alert("Network error. Please check your connection and try again.");
+        showToast("Network error. Please check your connection and try again.", "error");
+      } finally {
+        verifyBtn.disabled = false;
+        verifyBtn.textContent = "Verify";
       }
     });
   }
 
 });
 
-  // ✅ Go to Dashboard button (on success page)
-  const dashboardBtn = document.getElementById('goToDashboardBtn');
-  if (dashboardBtn) {
-    dashboardBtn.addEventListener('click', () => {
-      // Redirect student to dashboard page
-      window.location.href = "../../Dashboards/StudentPages/dashboard.html"; // 🔁 change this if your dashboard file has a different name or path
-    });
-  }
+// ✅ Go to Dashboard button (on success page)
+const dashboardBtn = document.getElementById('goToDashboardBtn');
+if (dashboardBtn) {
+  dashboardBtn.addEventListener('click', () => {
+    // Redirect student to dashboard page
+    window.location.href = "../../Dashboards/StudentPages/dashboard.html"; // 🔁 change this if your dashboard file has a different name or path
+  });
+}
 
 
