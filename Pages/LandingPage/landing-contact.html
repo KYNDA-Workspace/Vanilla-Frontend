@@ -1,235 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kynda Contact</title>
-    <link rel="stylesheet" href="landingpage.css">
-    <link rel="stylesheet" href="landing-navbar.css">
-    <link rel="stylesheet" href="../../Components/Footer/footer.css">
-    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
-    <script src="https://kit.fontawesome.com/8d8e864534.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-
+    <link rel="stylesheet" href="landingpage.css" />
+    <link rel="stylesheet" href="landing-navbar.css" />
+    <link rel="stylesheet" href="../../Components/Footer/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/8d8e864534.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!---- Navigation Section Starts---->
     <section id="nav-section">
+      <!-- Mobile Menu Button (keeps icon font provided in head) -->
+      <button
+        id="mobile-menu-btn"
+        class="mobile-menu-icon"
+        aria-controls="primary-nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="hgi hgi-stroke hgi-menu-02" aria-hidden="true"></i>
+      </button>
 
-        <!-- Mobile Menu Button (keeps icon font provided in head) -->
-        <button id="mobile-menu-btn" class="mobile-menu-icon" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="hgi hgi-stroke hgi-menu-02" aria-hidden="true"></i>
-        </button>
+      <div class="logo">
+        <img src="images/logo.png" alt="logo" />
+      </div>
 
-        <div class="logo">
-            <img src="images/Logo.png" alt="logo">
-        </div>
+      <nav id="primary-nav" aria-hidden="true">
+        <ol>
+          <li><a href="/index.html" class="nav-selected">Home</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">How it Works</a></li>
+          <li><a href="">Features</a></li>
+          <li>
+            <a href="/Pages/LandingPage/landing-contact.html">Contact Us</a>
+          </li>
+          <li class="nav-teach">
+            <a href="" class="teach-link">Teach on Kynda</a>
+          </li>
+        </ol>
+      </nav>
 
-        <nav id="primary-nav" aria-hidden="true">
-            <ol>
-                <li><a href="/index.html" class="nav-selected">Home</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">How it Works</a></li>
-                <li><a href="">Features</a></li>
-                <li><a href="/Pages/LandingPage/landing-contact.html">Contact Us</a></li>
-                <li class="nav-teach"><a href="" class="teach-link">Teach on Kynda</a></li>
-            </ol>
-        </nav>
-
-        <div class="call-to-action">
-            <button class="login-btn">Login</button>
-            <button class="signup-btn">Sign Up</button>
-        </div>
-
+      <div class="call-to-action">
+        <button class="login-btn">Login</button>
+        <button class="signup-btn">Sign Up</button>
+      </div>
     </section>
     <!-- Navigation Section Ends -->
 
-
-
     <!-- Contact Section Starts -->
-     <section id="contact-sect">
+    <section id="contact-sect">
+      <div class="how-title">
+        <h2>Get In Touch With Us</h2>
+        <p>
+          Reach out to us with any question or inquiry you have and we'll do our
+          best to get <br />
+          back to you as soon as possible.
+        </p>
+      </div>
 
-        <div class="how-title">
-            <h2>Get In Touch With Us</h2>
-            <p>Reach out to us with any question or inquiry you have and we'll do our best to get <br> back to you as soon as possible.</p>
+      <form action="#" id="contact-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Full Name"
+            required
+          />
         </div>
 
-        <form action="#" id="contact-form">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@gmail.com"
+            required
+          />
+        </div>
 
-            <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-            </div>
+        <div class="form-group">
+          <label for="phone-number">Phone Number</label>
+          <input
+            type="text"
+            id="phone-number"
+            name="phone-number"
+            placeholder="+908 765 4321"
+            required
+          />
+        </div>
 
-            <div class="form-group">
-                <label for="email">Email</label> 
-                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
-            </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Enquiry"
+            required
+          />
+        </div>
 
-            <div class="form-group">
-                <label for="phone-number">Phone Number</label>
-                <input type="text" id="phone-number" name="phone-number" placeholder="+908 765 4321" required>
-            </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            rows="10"
+            placeholder="Hi! We Are Kynda"
+          ></textarea>
+        </div>
 
-            <div class="form-group">
-                <label for="subject">Subject</label> 
-                <input type="text" id="subject" name="subject" placeholder="Enquiry" required>
-            </div>
-
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="10"  placeholder="Hi! We Are Kynda"></textarea>
-            </div>
-
-            <button type="submit" class="contact-btn">Send your Message</button>
-
-        </form>
-
-     </section>
-
-
-
-
-
-
+        <button type="submit" class="contact-btn">Send your Message</button>
+      </form>
+    </section>
 
     <!-- Footer Section Starts -->
 
     <footer id="footer-section">
+      <!-- Top part of the Footer  -->
+      <div class="footerTop-container">
+        <!-- Box 1 -->
+        <div class="footer-content box1">
+          <div class="logo">
+            <img src="images/footerLogo.png" alt="Kynda logo" />
+          </div>
 
-        <!-- Top part of the Footer  -->
-        <div class="footerTop-container">
-
-            <!-- Box 1 -->
-            <div class="footer-content box1">
-
-                <div class="logo">
-                    <img src="images/footerLogo.png" alt="Kynda logo">
-                </div>
-
-                <h4>Contact</h4>
-                <p><i class="fa-solid fa-phone"></i> Emergency Line: +1-800-SKY-HELP</p>
-                <p><i class="fa-solid fa-envelope"></i> infor@kynda.com</p>
-            </div>
-
-            <!-- box 2 -->
-            <div class="footer-content box2">
-                <h4>Quick Links</h4>
-                <a href="/index.html"><p>Home</p></a>
-                <p>About</p>
-                <p>How it Works</p>
-                <p>For Parentes</p>
-                <p>For Tutors</p>
-            </div>
-
-            <!-- box 3 -->
-             <div class="footer-content box2">
-                <h4>Resources</h4>
-                <p>Learning Hub</p>
-                <p>Exam Prep Guides</p>
-            </div>
-
-            <!-- Box 4 -->
-             <div class="footer-content box2">
-                <h4>Legal</h4>
-                <p>Tutor Policy</p>
-                <p>Refund Policy</p>
-                <p>Contract Terms</p>
-            </div>
-
-            <!-- Box 5 -->
-             <div class="footer-content box2">
-                <h4>Help</h4>
-                <p>FAQ’s</p>
-                <a href="/Pages/LandingPage/landing-contact.html"><p>Message Us</p></a>
-            </div>
-
+          <h4>Contact</h4>
+          <p>
+            <i class="fa-solid fa-phone"></i> Emergency Line: +1-800-SKY-HELP
+          </p>
+          <p><i class="fa-solid fa-envelope"></i> infor@kynda.com</p>
         </div>
 
-        <!-- Bottom Part of the Footer -->
-
-        <div class="footerBottom-container">
-
-            <div class="footerTermsContainer">
-                <p>&copy; 2025 Kynda. All Rights Reserved.</p>
-                <a href="#">Terms & Conditions</a>
-                <p>|</p>
-                <a href="#">Privacy & Policy</a>
-            </div>
-
-            <div class="footerSocialMediaLogos">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-
+        <!-- box 2 -->
+        <div class="footer-content box2">
+          <h4>Quick Links</h4>
+          <a href="/index.html"><p>Home</p></a>
+          <p>About</p>
+          <p>How it Works</p>
+          <p>For Parentes</p>
+          <p>For Tutors</p>
         </div>
 
+        <!-- box 3 -->
+        <div class="footer-content box2">
+          <h4>Resources</h4>
+          <p>Learning Hub</p>
+          <p>Exam Prep Guides</p>
+        </div>
+
+        <!-- Box 4 -->
+        <div class="footer-content box2">
+          <h4>Legal</h4>
+          <p>Tutor Policy</p>
+          <p>Refund Policy</p>
+          <p>Contract Terms</p>
+        </div>
+
+        <!-- Box 5 -->
+        <div class="footer-content box2">
+          <h4>Help</h4>
+          <p>FAQ’s</p>
+          <a href="/Pages/LandingPage/landing-contact.html"
+            ><p>Message Us</p></a
+          >
+        </div>
+      </div>
+
+      <!-- Bottom Part of the Footer -->
+
+      <div class="footerBottom-container">
+        <div class="footerTermsContainer">
+          <p>&copy; 2025 Kynda. All Rights Reserved.</p>
+          <a href="#">Terms & Conditions</a>
+          <p>|</p>
+          <a href="#">Privacy & Policy</a>
+        </div>
+
+        <div class="footerSocialMediaLogos">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
     </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- Frequently Ask Question Script -->
     <script>
-        // Make each FAQ item toggle independently
-        (function(){
-            var items = document.querySelectorAll('.faq-container .faq-content');
-            items.forEach(function(item){
-                var header = item.querySelector('h4');
-                var text = item.querySelector('.faqtext');
-                var arrowUp = item.querySelector('.arrow-up');
-                var arrowDown = item.querySelector('.arrow-down');
+      // Make each FAQ item toggle independently
+      (function () {
+        var items = document.querySelectorAll(".faq-container .faq-content");
+        items.forEach(function (item) {
+          var header = item.querySelector("h4");
+          var text = item.querySelector(".faqtext");
+          var arrowUp = item.querySelector(".arrow-up");
+          var arrowDown = item.querySelector(".arrow-down");
 
-                // Ensure initial state
-                if(text) text.style.display = 'none';
-                if(arrowUp) arrowUp.style.display = 'none';
-                if(arrowDown) arrowDown.style.display = 'inline-block';
+          // Ensure initial state
+          if (text) text.style.display = "none";
+          if (arrowUp) arrowUp.style.display = "none";
+          if (arrowDown) arrowDown.style.display = "inline-block";
 
-                // Click either the whole item or header toggles
-                var toggleFn = function(){
-                    var isOpen = text && text.style.display === 'block';
-                    if(text) text.style.display = isOpen ? 'none' : 'block';
-                    if(arrowUp) arrowUp.style.display = isOpen ? 'none' : 'inline-block';
-                    if(arrowDown) arrowDown.style.display = isOpen ? 'inline-block' : 'none';
-                };
+          // Click either the whole item or header toggles
+          var toggleFn = function () {
+            var isOpen = text && text.style.display === "block";
+            if (text) text.style.display = isOpen ? "none" : "block";
+            if (arrowUp)
+              arrowUp.style.display = isOpen ? "none" : "inline-block";
+            if (arrowDown)
+              arrowDown.style.display = isOpen ? "inline-block" : "none";
+          };
 
-                // Attach listeners
-                item.addEventListener('click', function(e){
-                    // Prevent clicks inside links or buttons from toggling
-                    var tag = e.target.tagName.toLowerCase();
-                    if(tag === 'a' || tag === 'button') return;
-                    toggleFn();
-                });
-                // Also allow header click specifically
-                if(header) header.style.cursor = 'pointer';
-            });
-        })();
+          // Attach listeners
+          item.addEventListener("click", function (e) {
+            // Prevent clicks inside links or buttons from toggling
+            var tag = e.target.tagName.toLowerCase();
+            if (tag === "a" || tag === "button") return;
+            toggleFn();
+          });
+          // Also allow header click specifically
+          if (header) header.style.cursor = "pointer";
+        });
+      })();
     </script>
 
     <script src="JS/main.js"></script>
 
     <!-- ----- JavaScript for Mobile Navigation Toggle ----- -->
     <script src="/Pages/LandingPage/landing-navigation-toggle.js"></script>
-
-
-</body>
+  </body>
 </html>
