@@ -235,6 +235,7 @@ button:disabled {
   z-index: 9999;
 }
 .toast {
+  max-width: 300px;
   background-color: var(--the-box-background);
   color: var(--text-color);
   font-family: "Inter", sans-serif;
