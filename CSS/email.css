@@ -197,6 +197,7 @@ body {
   z-index: 9999;
 }
 .toast {
+  max-width: 300px;
   background-color: var(--right-background-color);
   color: var(--text-color);
   font-family: "Inter", sans-serif;
