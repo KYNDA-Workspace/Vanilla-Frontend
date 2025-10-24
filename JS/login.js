@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         window.location.href =
                             "../Dashboards/StudentPages/dashboard.html";
                     } else if (data.user?.role === "Tutor") {
-                        window.location.href = "../Dashboards/tutor.html";
+                        window.location.href = "../Dashboards/new-tutor.html";
                     } else {
                         showToast("User role not recognized.", "info");
                     }
