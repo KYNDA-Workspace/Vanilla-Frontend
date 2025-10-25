@@ -21,6 +21,13 @@ function validateRequiredField(value, fieldName, elementId) {
   }
   return true;
 }
+//toggle password button
+const togglePasswordBtns = document.querySelectorAll(".toggle-password");
+// Toggle password visibility
+togglePasswordBtns.forEach(btn => btn.addEventListener("click", () => {
+  const input = btn.parentElement.querySelector("input");
+  input.type = input.type === "password" ? "text" : "password";
+}));
 // Show toast message
 function showToast(message, type = "info") {
   const toastContainer = document.getElementById("toast-container");

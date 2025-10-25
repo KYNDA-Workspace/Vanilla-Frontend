@@ -95,12 +95,17 @@
           <div>
             <label for="password">Password<span>*</span></label>
             <br />
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="create password"
-            />
+            <div class="password-wrapper">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="create password"
+              />
+              <span class="toggle-password"
+                ><img src="images/eyeicon.svg" alt="Toggle password visibility"
+              /></span>
+            </div>
             <span class="error-message" id="passwordError"></span>
           </div>
 
@@ -108,12 +113,17 @@
           <div>
             <label for="confirmPassword">Confirm Password<span>*</span></label>
             <br />
-            <input
-              type="password"
-              name="confirm-password"
-              id="confirmPassword"
-              placeholder="confirm your password"
-            />
+            <div class="password-wrapper">
+              <input
+                type="password"
+                name="confirm-password"
+                id="confirmPassword"
+                placeholder="confirm your password"
+              />
+              <span class="toggle-password"
+                ><img src="images/eyeicon.svg" alt="Toggle password visibility"
+              /></span>
+            </div>
             <span class="error-message" id="confirmPasswordError"></span>
           </div>
 

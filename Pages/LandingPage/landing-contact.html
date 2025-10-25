@@ -37,7 +37,7 @@
       </button>
 
       <div class="logo">
-        <img src="images/logo.png" alt="logo" />
+        <a href="/index.html"><img src="images/logo.png" alt="logo" /></a>
       </div>
 
       <nav id="primary-nav" aria-hidden="true">
@@ -241,10 +241,16 @@
           if (header) header.style.cursor = "pointer";
         });
       })();
+      const signupBtn = document.querySelector(".signup-btn");
+      const loginBtn = document.querySelector(".login-btn");
+      signupBtn.addEventListener("click", () => {
+        window.location.href = "../../user-selection.html";
+      });
+      loginBtn.addEventListener("click", () => {
+        window.location.href = "../login/login.html";
+      });
     </script>
-
-    <script src="JS/main.js"></script>
-
+    <!-- <script src="../../JS/main.js"></script> -->
     <!-- ----- JavaScript for Mobile Navigation Toggle ----- -->
     <script src="/Pages/LandingPage/landing-navigation-toggle.js"></script>
   </body>

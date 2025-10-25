@@ -130,6 +130,19 @@ form label {
 form label span {
   color: red;
 }
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  margin-top: 10px;
+  color: #999;
+}
 
 /* Input field styling - Consistent look across all form inputs */
 form input {
