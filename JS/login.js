@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         // Prepare Payload
         const loginData = { email, password };
-        console.log("Login Data:", loginData); // Debugging log
+        // console.log("Login Data:", loginData); // Debugging log
         // Send Request
         try {
             const response = await fetch(`${API_URL}/api/auth/login`, {

@@ -1,646 +1,775 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kynda</title>
-    <link rel="stylesheet" href="Pages/LandingPage/landingpage.css">
-    <link rel="stylesheet" href="Pages/LandingPage/landing-navbar.css">
-    <link rel="stylesheet" href="../../Components/Footer/footer.css">
-    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
-    <script src="https://kit.fontawesome.com/8d8e864534.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-
+    <link rel="stylesheet" href="Pages/LandingPage/landingpage.css" />
+    <link rel="stylesheet" href="Pages/LandingPage/landing-navbar.css" />
+    <link rel="stylesheet" href="../../Components/Footer/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/8d8e864534.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!---- Navigation Section Starts---->
     <section id="nav-section">
+      <!-- Mobile Menu Button (keeps icon font provided in head) -->
+      <button
+        id="mobile-menu-btn"
+        class="mobile-menu-icon"
+        aria-controls="primary-nav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="hgi hgi-stroke hgi-menu-02" aria-hidden="true"></i>
+      </button>
 
-        <!-- Mobile Menu Button (keeps icon font provided in head) -->
-        <button id="mobile-menu-btn" class="mobile-menu-icon" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="hgi hgi-stroke hgi-menu-02" aria-hidden="true"></i>
-        </button>
+      <div class="logo">
+        <img src="Pages/LandingPage/images/logo.png" alt="logo" />
+      </div>
 
-        <div class="logo">
-            <img src="Pages/LandingPage/images/logo.png" alt="logo">
-        </div>
+      <nav id="primary-nav" aria-hidden="true">
+        <ol>
+          <li><a href="" class="nav-selected">Home</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">How it Works</a></li>
+          <li><a href="">Features</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li class="nav-teach">
+            <a href="" class="teach-link">Teach on Kynda</a>
+          </li>
+        </ol>
+      </nav>
 
-        <nav id="primary-nav" aria-hidden="true">
-            <ol>
-                <li><a href="" class="nav-selected">Home</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">How it Works</a></li>
-                <li><a href="">Features</a></li>
-                <li><a href="">Contact Us</a></li>
-                <li class="nav-teach"><a href="" class="teach-link">Teach on Kynda</a></li>
-            </ol>
-        </nav>
-
-        <div class="call-to-action">
-            <button class="login-btn">Login</button>
-            <button class="signup-btn">Sign Up</button>
-        </div>
-
+      <div class="call-to-action">
+        <button class="login-btn">Login</button>
+        <button class="signup-btn">Sign Up</button>
+      </div>
     </section>
     <!-- Navigation Section Ends -->
-
-
-
 
     <!-- Header Section Starts  -->
 
     <header>
+      <div class="header-text">
+        <h1>
+          <span>Affordable</span> Lessons. Trusted <span>Tutors</span>. Real
+          Progress.
+        </h1>
+        <p>
+          Short lessons (30–120 mins) designed for exam success & homework help
+          starting at just ₦3000.
+        </p>
 
-        <div class="header-text">
-
-            <h1><span>Affordable</span> Lessons. Trusted <span>Tutors</span>. Real Progress.</h1>
-            <p>Short lessons (30–120 mins) designed for exam success & homework help starting at just ₦3000.</p>
-
-            <div class="header-button">
-                <button class="pry-btn">Find a Tutor</button>
-                <button class="sec-btn">Teach & Earn</button>
-            </div>
-
+        <div class="header-button">
+          <button class="pry-btn studentbtn">Find a Tutor</button>
+          <button class="sec-btn">Teach & Earn</button>
         </div>
+      </div>
 
-        <div class="header-image">
-            <img src="Pages/LandingPage/images/header-img.png" alt="image">
-        </div>
-
+      <div class="header-image">
+        <img src="Pages/LandingPage/images/header-img.png" alt="image" />
+      </div>
     </header>
     <!-- Header Section Ends  -->
-
 
     <!-------- Sponsor Section Starts -------->
 
     <section id="sponsor-sect">
+      <div class="sponsor-title">
+        <h1>Trusted by +3000 Students and Schools</h1>
+      </div>
 
-        <div class="sponsor-title">
-            <h1>Trusted by +3000 Students and Schools</h1>
+      <div class="sponsor-logo-container">
+        <div class="sponsor-logo">
+          <img src="Pages/LandingPage/images/waec.png" alt="waec logo" />
         </div>
-
-        <div class="sponsor-logo-container">
-
-            <div class="sponsor-logo"><img src="Pages/LandingPage/images/waec.png" alt="waec logo"></div>
-            <div class="sponsor-logo"><img src="Pages/LandingPage/images/fme.png" alt="fme logo"></div>
-            <div class="sponsor-logo"><img src="Pages/LandingPage/images/asuu.jpg" alt="asuu logo"></div>
-            <div class="sponsor-logo"><img src="Pages/LandingPage/images/jamb.png" alt="jamb logo"></div>
-            <div class="sponsor-logo"><img src="Pages/LandingPage/images/asup.png" alt="asup logo"></div>
-            <div class="sponsor-logo"><img src="Pages/LandingPage/images/neco.png" alt="neco logo"></div>
-            <div class="sponsor-logo"><img src="Pages/LandingPage/images/nea.png" alt="nea logo"></div>
-            <div class="sponsor-logo"><img src="Pages/LandingPage/images/ncee.png" alt="ncee logo"></div>
-
+        <div class="sponsor-logo">
+          <img src="Pages/LandingPage/images/fme.png" alt="fme logo" />
         </div>
-
+        <div class="sponsor-logo">
+          <img src="Pages/LandingPage/images/asuu.jpg" alt="asuu logo" />
+        </div>
+        <div class="sponsor-logo">
+          <img src="Pages/LandingPage/images/jamb.png" alt="jamb logo" />
+        </div>
+        <div class="sponsor-logo">
+          <img src="Pages/LandingPage/images/asup.png" alt="asup logo" />
+        </div>
+        <div class="sponsor-logo">
+          <img src="Pages/LandingPage/images/neco.png" alt="neco logo" />
+        </div>
+        <div class="sponsor-logo">
+          <img src="Pages/LandingPage/images/nea.png" alt="nea logo" />
+        </div>
+        <div class="sponsor-logo">
+          <img src="Pages/LandingPage/images/ncee.png" alt="ncee logo" />
+        </div>
+      </div>
     </section>
     <!-------- Sponsor Section Ends -------->
-
-
 
     <!-- Learning Categories Section Starts -->
 
     <section id="learn-cart-sect">
-        
-        <div class="learn-cart1">
-
-            <div class="learn-cart1-text">
-                <h2>Learning Categories</h2>
-                <p>Short lessons (30–60 mins) designed for exam success & homework help starting at just ₦500.</p>
-                <button>Check Categories <i class="hgi hgi-solid hgi-arrow-right-02"></i></button>
-            </div>
-
-            <div class="learn-cart1-images">
-                
-                <div class="learn-image-container1">
-                    <div class="learn-images">
-                        <img src="Pages/LandingPage/images/img12.png" alt="English">
-                    </div>
-                    <h4>English</h4>
-                </div>
-
-                <div class="learn-image-container1">
-                    <div class="learn-images">
-                        <img src="Pages/LandingPage/images/img13.png" alt="English">
-                    </div>
-                    <h4>Mathematics</h4>
-                </div>
-
-            </div>
-
+      <div class="learn-cart1">
+        <div class="learn-cart1-text">
+          <h2>Learning Categories</h2>
+          <p>
+            Short lessons (30–60 mins) designed for exam success & homework help
+            starting at just ₦500.
+          </p>
+          <button>
+            Check Categories <i class="hgi hgi-solid hgi-arrow-right-02"></i>
+          </button>
         </div>
 
-
-        <div class="learn-cart2">
-
-            <div class="learn-cart2-images">
-                
-                <div class="learn-image-container2">
-                    <div class="learn-images">
-                        <img src="Pages/LandingPage/images/img14.png" alt="English">
-                    </div>
-                    <h4>Social Science</h4>
-                </div>
-
-                <div class="learn-image-container2">
-                    <div class="learn-images">
-                        <img src="Pages/LandingPage/images/img15.png" alt="English">
-                    </div>
-                    <h4>Sciences</h4>
-                </div>
-
-                <div class="learn-image-container2">
-                    <div class="learn-images">
-                        <img src="Pages/LandingPage/images/img16.png" alt="English">
-                    </div>
-                    <h4>Arts</h4>
-                </div>
-
-                <div class="learn-image-container2">
-                    <div class="learn-images">
-                        <img src="Pages/LandingPage/images/img17.png" alt="English">
-                    </div>
-                    <h4>Junior Subjects</h4>
-                </div>
-
+        <div class="learn-cart1-images">
+          <div class="learn-image-container1">
+            <div class="learn-images">
+              <img src="Pages/LandingPage/images/img12.png" alt="English" />
             </div>
+            <h4>English</h4>
+          </div>
 
+          <div class="learn-image-container1">
+            <div class="learn-images">
+              <img src="Pages/LandingPage/images/img13.png" alt="English" />
+            </div>
+            <h4>Mathematics</h4>
+          </div>
         </div>
+      </div>
 
+      <div class="learn-cart2">
+        <div class="learn-cart2-images">
+          <div class="learn-image-container2">
+            <div class="learn-images">
+              <img src="Pages/LandingPage/images/img14.png" alt="English" />
+            </div>
+            <h4>Social Science</h4>
+          </div>
+
+          <div class="learn-image-container2">
+            <div class="learn-images">
+              <img src="Pages/LandingPage/images/img15.png" alt="English" />
+            </div>
+            <h4>Sciences</h4>
+          </div>
+
+          <div class="learn-image-container2">
+            <div class="learn-images">
+              <img src="Pages/LandingPage/images/img16.png" alt="English" />
+            </div>
+            <h4>Arts</h4>
+          </div>
+
+          <div class="learn-image-container2">
+            <div class="learn-images">
+              <img src="Pages/LandingPage/images/img17.png" alt="English" />
+            </div>
+            <h4>Junior Subjects</h4>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Learning Categories Section Ends -->
-
 
     <!-- ------ How it works Section Starts ------ -->
 
     <section id="how-sect">
+      <div class="how-title">
+        <h1>How It Works</h1>
+        <p>
+          Simple steps to get started with Kynda, whether <br />
+          you're a parent/student or a tutor
+        </p>
+      </div>
 
-        <div class="how-title">
-            <h1>How It Works</h1>
-            <p>Simple steps to get started with Kynda, whether <br> you're a parent/student or a tutor</p>
+      <div class="how-toggle-div">
+        <div class="how-toggle-container">
+          <button><span>Students</span> <span>Tutor</span></button>
+        </div>
+      </div>
+
+      <div class="how-cards-container">
+        <div class="how-card">
+          <div class="icon">
+            <i class="hgi hgi-stroke hgi-search-add"></i>
+          </div>
+          <h4>Search for a tutor by subject</h4>
+          <p>
+            Browse through our verified tutors and find the perfect match for
+            your learning needs. Filter by subject and availability.
+          </p>
         </div>
 
-        <div class="how-toggle-div">
-
-            <div class="how-toggle-container">
-                <button> <span>Students</span> <span>Tutor</span> </button>
-            </div>
-
+        <div class="how-card">
+          <div class="icon">
+            <i class="hgi hgi-stroke hgi-sharp hgi-check-list"></i>
+          </div>
+          <h4>Search for a tutor by subject</h4>
+          <p>
+            Browse through our verified tutors and find the perfect match for
+            your learning needs. Filter by subject and availability.
+          </p>
         </div>
 
-        <div class="how-cards-container">
-
-            <div class="how-card">
-                <div class="icon">
-                    <i class="hgi hgi-stroke hgi-search-add"></i>
-                </div>
-                <h4>Search for a tutor by subject</h4>
-                <p>Browse through our verified tutors and find the perfect match for your learning needs. Filter by subject and availability.</p>
-            </div>
-
-            <div class="how-card">
-                <div class="icon">
-                    <i class="hgi hgi-stroke hgi-sharp hgi-check-list"></i>
-                </div>
-                <h4>Search for a tutor by subject</h4>
-                <p>Browse through our verified tutors and find the perfect match for your learning needs. Filter by subject and availability.</p>
-            </div>
-
-            <div class="how-card">
-                <div class="icon">
-                    <i class="hgi hgi-stroke hgi-calendar-love-01"></i>
-                </div>
-                <h4>Search for a tutor by subject</h4>
-                <p>Browse through our verified tutors and find the perfect match for your learning needs. Filter by subject and availability.</p>
-            </div>
-
+        <div class="how-card">
+          <div class="icon">
+            <i class="hgi hgi-stroke hgi-calendar-love-01"></i>
+          </div>
+          <h4>Search for a tutor by subject</h4>
+          <p>
+            Browse through our verified tutors and find the perfect match for
+            your learning needs. Filter by subject and availability.
+          </p>
         </div>
-
+      </div>
     </section>
     <!-- ------ How it works Section Ends ------ -->
-
-
 
     <!-- Specialy Built Section Starts -->
 
     <section id="special-sect">
-        
-        <div class="how-title">
-            <h1>Specially Built for Learners & Tutors</h1>
-            <p>Learning dashboards for students and tutors with dedicated <br> dashboard for parents to follow up on student’s learning.</p>
+      <div class="how-title">
+        <h1>Specially Built for Learners & Tutors</h1>
+        <p>
+          Learning dashboards for students and tutors with dedicated <br />
+          dashboard for parents to follow up on student’s learning.
+        </p>
+      </div>
+
+      <div class="special-card-container">
+        <div class="special-card">
+          <div class="special-image">
+            <img
+              src="Pages/LandingPage/images/image 51.png"
+              alt="Dashboard Image"
+            />
+          </div>
+          <h4>Parent’s Dashboard</h4>
+          <p>
+            Parents manage child profiles, approve lessons, monitor progress,
+            <br />
+            and control spending with ease.
+          </p>
         </div>
 
-        <div class="special-card-container">
+        <div class="special-card">
+          <div class="special-image">
+            <img
+              src="Pages/LandingPage/images/image 39.png"
+              alt="Dashboard Image"
+            />
+          </div>
+          <h4>Parent’s Dashboard</h4>
+          <p>
+            Parents manage child profiles, approve lessons, monitor progress,
+            <br />
+            and control spending with ease.
+          </p>
+        </div>
+      </div>
 
-            <div class="special-card">
-                <div class="special-image">
-                    <img src="Pages/LandingPage/images/image 51.png" alt="Dashboard Image">
-                </div>
-                <h4>Parent’s Dashboard</h4>
-                <p>Parents manage child profiles, approve lessons, monitor progress, <br> and control spending with ease.</p>
-            </div>
-
-            <div class="special-card">
-                <div class="special-image">
-                    <img src="Pages/LandingPage/images/image 39.png" alt="Dashboard Image">
-                </div>
-                <h4>Parent’s Dashboard</h4>
-                <p>Parents manage child profiles, approve lessons, monitor progress, <br> and control spending with ease.</p>
-            </div>
-
+      <!-- Select Course Section Starts (Gradient) -->
+      <div id="select-sect">
+        <div class="select-title">
+          <h1>
+            Select Courses, <br />
+            Schedule Interviews <br />
+            and Join Classes
+          </h1>
+          <button class="select-btn">Join Kynda Now</button>
         </div>
 
-
-        <!-- Select Course Section Starts (Gradient) -->
-        <div id="select-sect">
-
-            <div class="select-title">
-                <h1>Select Courses, <br> Schedule Interviews <br> and Join Classes</h1>
-                <button class="select-btn">Join Kynda Now</button>
-            </div>
-
-            <div class="select-image">
-                <img src="Pages/LandingPage/images/image 50.png" class="select-image1" alt="Select Course Image">
-                <img src="Pages/LandingPage/images/image 48.png" class="select-image2" alt="select course image">
-            </div>
-
+        <div class="select-image">
+          <img
+            src="Pages/LandingPage/images/image 50.png"
+            class="select-image1"
+            alt="Select Course Image"
+          />
+          <img
+            src="Pages/LandingPage/images/image 48.png"
+            class="select-image2"
+            alt="select course image"
+          />
         </div>
-        <!-- Specialy Built Section Ends -->
-
+      </div>
+      <!-- Specialy Built Section Ends -->
     </section>
     <!-- Specialy Built Section Starts -->
-
-
 
     <!-- Choose Kynda Section Starts -->
 
     <section id="choose-sect">
+      <div class="how-title">
+        <h1>Why Choose <span>Kynda?</span></h1>
+        <p>
+          Discover the benefits that make Kynda the <br />
+          preferred learning platform
+        </p>
+      </div>
 
-        <div class="how-title">
-            <h1>Why Choose <span>Kynda?</span></h1>
-            <p>Discover the benefits that make Kynda the <br> preferred learning platform</p>
+      <div class="choose-card-container">
+        <div class="how-card">
+          <div class="icon">
+            <i class="hgi hgi-stroke hgi-wallet-01"></i>
+          </div>
+          <h4>Affordable</h4>
+          <p>
+            Lessons starting at just ₦500, making quality education accessible
+            to everyone.
+          </p>
         </div>
 
-        <div class="choose-card-container">
-            
-            <div class="how-card">
-                <div class="icon">
-                    <i class="hgi hgi-stroke hgi-wallet-01"></i>
-                </div>
-                <h4>Affordable</h4>
-                <p>Lessons starting at just ₦500, making quality education accessible to everyone.</p>
-            </div>
-
-            <div class="how-card">
-                <div class="icon">
-                    <i class="hgi hgi-stroke hgi-calendar-03"></i>
-                </div>
-                <h4>Flexible</h4>
-                <p>30-60 minute sessions available anytime, fitting perfectly into your busy schedule.</p>
-            </div>
-
-            <div class="how-card">
-                <div class="icon">
-                    <i class="hgi hgi-stroke hgi-view"></i>
-                </div>
-                <h4>Transparent</h4>
-                <p>Parents can track their child's progress in real-time through our intuitive dashboard.</p>
-            </div>
-
-            <div class="how-card">
-                <div class="icon">
-                    <i class="hgi hgi-stroke hgi-security-check"></i>
-                </div>
-                <h4>Trusted Tutors</h4>
-                <p>All tutors are verified, vetted, and rated by students to ensure quality teaching.</p>
-            </div>
-
-            <div class="how-card">
-                <div class="icon">
-                    <i class="hgi hgi-stroke hgi-crown"></i>
-                </div>
-                <h4>Fair Tutor Play</h4>
-                <p>Clear commission system with fast withdrawals, ensuring tutors are rewarded</p>
-            </div>
-
-            <div class="how-card">
-                <div class="icon">
-                    <i class="hgi hgi-stroke hgi-mortarboard-01"></i>
-                </div>
-                <h4>Exam Focused</h4>
-                <p>Specialized preparation for WAEC, NECO, JAMB and other important examinations.</p>
-            </div>
-
+        <div class="how-card">
+          <div class="icon">
+            <i class="hgi hgi-stroke hgi-calendar-03"></i>
+          </div>
+          <h4>Flexible</h4>
+          <p>
+            30-60 minute sessions available anytime, fitting perfectly into your
+            busy schedule.
+          </p>
         </div>
 
+        <div class="how-card">
+          <div class="icon">
+            <i class="hgi hgi-stroke hgi-view"></i>
+          </div>
+          <h4>Transparent</h4>
+          <p>
+            Parents can track their child's progress in real-time through our
+            intuitive dashboard.
+          </p>
+        </div>
+
+        <div class="how-card">
+          <div class="icon">
+            <i class="hgi hgi-stroke hgi-security-check"></i>
+          </div>
+          <h4>Trusted Tutors</h4>
+          <p>
+            All tutors are verified, vetted, and rated by students to ensure
+            quality teaching.
+          </p>
+        </div>
+
+        <div class="how-card">
+          <div class="icon">
+            <i class="hgi hgi-stroke hgi-crown"></i>
+          </div>
+          <h4>Fair Tutor Play</h4>
+          <p>
+            Clear commission system with fast withdrawals, ensuring tutors are
+            rewarded
+          </p>
+        </div>
+
+        <div class="how-card">
+          <div class="icon">
+            <i class="hgi hgi-stroke hgi-mortarboard-01"></i>
+          </div>
+          <h4>Exam Focused</h4>
+          <p>
+            Specialized preparation for WAEC, NECO, JAMB and other important
+            examinations.
+          </p>
+        </div>
+      </div>
     </section>
     <!-- Choose Kynda Section Ends -->
-
-
-
 
     <!-- Performance Section Starts -->
 
     <section id="perfomance-sect">
+      <div class="perfomance-image">
+        <img
+          src="Pages/LandingPage/images/L&R Image.png"
+          alt="Performance Image"
+        />
+      </div>
 
-        <div class="perfomance-image">
-            <img src="Pages/LandingPage/images/L&R Image.png" alt="Performance Image">
-        </div>
-
-        <div class="perfomance-text">
-
-            <h1>Empowering Students, Supporting  Parents, and Enabling Tutors Through Accessible and Affordable Learning</h1>
-            <h6>Kynda connects learners with trusted tutors, making quality education simple, flexible, and affordable for everyone.</h6>
-            <p><i class="fa-solid fa-circle-check"></i> Equipped with Verified and Qualified Tutors</p>
-            <p><i class="fa-solid fa-circle-check"></i> 99.9% guaranteed Student improvement and Exam Success</p>
-            <p><i class="fa-solid fa-circle-check"></i> Secured platform with easy funding and payout</p>
-            <button class="perfomance-btn">Get Started</button>
-
-        </div>
-
+      <div class="perfomance-text">
+        <h1>
+          Empowering Students, Supporting Parents, and Enabling Tutors Through
+          Accessible and Affordable Learning
+        </h1>
+        <h6>
+          Kynda connects learners with trusted tutors, making quality education
+          simple, flexible, and affordable for everyone.
+        </h6>
+        <p>
+          <i class="fa-solid fa-circle-check"></i> Equipped with Verified and
+          Qualified Tutors
+        </p>
+        <p>
+          <i class="fa-solid fa-circle-check"></i> 99.9% guaranteed Student
+          improvement and Exam Success
+        </p>
+        <p>
+          <i class="fa-solid fa-circle-check"></i> Secured platform with easy
+          funding and payout
+        </p>
+        <button class="perfomance-btn">Get Started</button>
+      </div>
     </section>
     <!-- Performance Section Ends -->
-
-    
 
     <!-- Testimonial Section Starts -->
 
     <section id="testimonial-sect">
+      <div class="how-title">
+        <h1>Trusted By Learners & Tutors Worldwide</h1>
+        <p>
+          Discover the benefits that make Kynda the <br />
+          preferred learning platform
+        </p>
+      </div>
 
-        <div class="how-title">
-            <h1>Trusted By Learners & Tutors Worldwide</h1>
-            <p>Discover the benefits that make Kynda the <br> preferred learning platform</p>
+      <div class="testimonial-card-container">
+        <div class="testimonial-card">
+          <div class="icon">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p>
+            "Kynda has made learning so much easier for me. I used to struggle
+            with Physics, but now I understand the concepts clearly because my
+            tutor breaks everything down step by step. I feel more confident
+            going into my exams."
+          </p>
+
+          <div class="testimonial-profile-box">
+            <div class="testimonial-profile-pic">
+              <img
+                src="Pages/LandingPage/images/testimonial-profile1.png"
+                alt="profile picture"
+              />
+            </div>
+            <div class="testimonial-profile-text">
+              <h4>Olamide Johnson</h4>
+              <p>Student</p>
+            </div>
+          </div>
         </div>
 
+        <div class="testimonial-card">
+          <div class="icon">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p>
+            "Becoming a tutor on Kynda has been a game-changer. I get to share
+            my knowledge, connect with eager learners, and earn a steady income
+            with flexible hours. The platform makes it simple to manage my
+            sessions and payments."
+          </p>
 
-        <div class="testimonial-card-container">
-
-            <div class="testimonial-card">
-                <div class="icon">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-                <p>"Kynda has made learning so much easier for me. I used to struggle with Physics, but now I understand the concepts clearly because my tutor breaks everything down step by step. I feel more confident going into my exams."</p>
-                
-                <div class="testimonial-profile-box">
-                    <div class="testimonial-profile-pic">
-                        <img src="Pages/LandingPage/images/testimonial-profile1.png" alt="profile picture">
-                    </div>
-                    <div class="testimonial-profile-text">
-                        <h4>Olamide Johnson</h4>
-                        <p>Student</p>
-                    </div>
-                </div>
+          <div class="testimonial-profile-box">
+            <div class="testimonial-profile-pic">
+              <img
+                src="Pages/LandingPage/images/testimonial-profile2.png"
+                alt="profile picture"
+              />
             </div>
-
-            <div class="testimonial-card">
-                <div class="icon">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-                <p>"Becoming a tutor on Kynda has been a game-changer. I get to share my knowledge, connect with eager learners, and earn a steady income with flexible hours. The platform makes it simple to manage my sessions and payments."</p>
-                
-                <div class="testimonial-profile-box">
-                    <div class="testimonial-profile-pic">
-                        <img src="Pages/LandingPage/images/testimonial-profile2.png" alt="profile picture">
-                    </div>
-                    <div class="testimonial-profile-text">
-                        <h4>Grace Nwachukwu</h4>
-                        <p>Tutor</p>
-                    </div>
-                </div>
+            <div class="testimonial-profile-text">
+              <h4>Grace Nwachukwu</h4>
+              <p>Tutor</p>
             </div>
-
-            <div class="testimonial-card">
-                <div class="icon">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-                <p>"As a parent, I love Kynda because I can track my daughter’s lessons and progress. The tutors are professional and reliable, and I have peace of mind knowing she’s getting the support she needs without overspending."</p>
-                
-                <div class="testimonial-profile-box">
-                    <div class="testimonial-profile-pic">
-                        <img src="Pages/LandingPage/images/testimonial-profile3.png" alt="profile picture">
-                    </div>
-                    <div class="testimonial-profile-text">
-                        <h4>Mr. Ahmed Musa</h4>
-                        <p>Parent</p>
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </div>
 
+        <div class="testimonial-card">
+          <div class="icon">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p>
+            "As a parent, I love Kynda because I can track my daughter’s lessons
+            and progress. The tutors are professional and reliable, and I have
+            peace of mind knowing she’s getting the support she needs without
+            overspending."
+          </p>
+
+          <div class="testimonial-profile-box">
+            <div class="testimonial-profile-pic">
+              <img
+                src="Pages/LandingPage/images/testimonial-profile3.png"
+                alt="profile picture"
+              />
+            </div>
+            <div class="testimonial-profile-text">
+              <h4>Mr. Ahmed Musa</h4>
+              <p>Parent</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- Testimonial Section Ends -->
-
-
 
     <!-- Frequently Asked Questions Section Starts -->
 
     <section id="faq-sect">
+      <div class="how-title">
+        <h1>Frequently Asked Questions Section Starts</h1>
+        <p>
+          Kynda matches students to verified tutors based on subjects, class
+          level, and <br />
+          availability. Students (or parents) can browse tutor profiles, check
+          ratings, and book <br />
+          sessions instantly.
+        </p>
+      </div>
 
-        <div class="how-title">
-            <h1>Frequently Asked Questions Section Starts</h1>
-            <p>Kynda matches students to verified tutors based on subjects, class level, and <br> availability. Students (or parents) can browse tutor profiles, check ratings, and book <br> sessions instantly.</p>
+      <div class="faq-container">
+        <div class="faq-content">
+          <h4>
+            How does Kynda connect students with tutors?
+            <span>
+              <i
+                class="hgi hgi-stroke hgi-arrow-up-01 arrow-up"
+                style="display: none"
+              ></i>
+              <i class="hgi hgi-stroke hgi-arrow-down-01 arrow-down"></i>
+            </span>
+          </h4>
+          <p class="faqtext" style="display: none">
+            Kynda matches students to verified tutors based on subjects, class
+            level, and availability. Students (or parents) can browse tutor
+            profiles, check ratings, and book sessions instantly.
+          </p>
         </div>
 
-        <div class="faq-container">
-
-            <div class="faq-content">
-                <h4>How does Kynda connect students with tutors? <span> <i class="hgi hgi-stroke hgi-arrow-up-01 arrow-up" style="display:none"></i> <i class="hgi hgi-stroke hgi-arrow-down-01 arrow-down"></i> </span></h4>
-                <p class="faqtext" style="display:none">Kynda matches students to verified tutors based on subjects, class level, and availability. Students (or parents) can browse tutor profiles, check ratings, and book sessions instantly.</p>
-            </div>
-
-            <div class="faq-content">
-                <h4>How do I book and pay for a lesson? <span> <i class="hgi hgi-stroke hgi-arrow-up-01 arrow-up" style="display:none"></i> <i class="hgi hgi-stroke hgi-arrow-down-01 arrow-down"></i> </span></h4>
-                <p class="faqtext" style="display:none">You can book a lesson from a tutor's profile and pay securely through our platform using the supported payment methods. Receipts and session details will be available in your dashboard.</p>
-            </div>
-
-            <div class="faq-content">
-                <h4>What if I need to reschedule or cancel? <span> <i class="hgi hgi-stroke hgi-arrow-up-01 arrow-up" style="display:none"></i> <i class="hgi hgi-stroke hgi-arrow-down-01 arrow-down"></i> </span></h4>
-                <p class="faqtext" style="display:none">You can reschedule or cancel a lesson from your dashboard. Cancellation and rescheduling policies depend on the time before the lesson and the tutor's settings.</p>
-            </div>
-
-            <div class="faq-content">
-                <h4>What payment methods are available? <span> <i class="hgi hgi-stroke hgi-arrow-up-01 arrow-up" style="display:none"></i> <i class="hgi hgi-stroke hgi-arrow-down-01 arrow-down"></i> </span></h4>
-                <p class="faqtext" style="display:none">You can reschedule or cancel a lesson from your dashboard. Cancellation and rescheduling policies depend on the time before the lesson and the tutor's settings.</p>
-            </div>
-
-            <div class="faq-content">
-                <h4>What happens if a student misses a session? <span> <i class="hgi hgi-stroke hgi-arrow-up-01 arrow-up" style="display:none"></i> <i class="hgi hgi-stroke hgi-arrow-down-01 arrow-down"></i> </span></h4>
-                <p class="faqtext" style="display:none">You can reschedule or cancel a lesson from your dashboard. Cancellation and rescheduling policies depend on the time before the lesson and the tutor's settings.</p>
-            </div>
-
+        <div class="faq-content">
+          <h4>
+            How do I book and pay for a lesson?
+            <span>
+              <i
+                class="hgi hgi-stroke hgi-arrow-up-01 arrow-up"
+                style="display: none"
+              ></i>
+              <i class="hgi hgi-stroke hgi-arrow-down-01 arrow-down"></i>
+            </span>
+          </h4>
+          <p class="faqtext" style="display: none">
+            You can book a lesson from a tutor's profile and pay securely
+            through our platform using the supported payment methods. Receipts
+            and session details will be available in your dashboard.
+          </p>
         </div>
 
+        <div class="faq-content">
+          <h4>
+            What if I need to reschedule or cancel?
+            <span>
+              <i
+                class="hgi hgi-stroke hgi-arrow-up-01 arrow-up"
+                style="display: none"
+              ></i>
+              <i class="hgi hgi-stroke hgi-arrow-down-01 arrow-down"></i>
+            </span>
+          </h4>
+          <p class="faqtext" style="display: none">
+            You can reschedule or cancel a lesson from your dashboard.
+            Cancellation and rescheduling policies depend on the time before the
+            lesson and the tutor's settings.
+          </p>
+        </div>
+
+        <div class="faq-content">
+          <h4>
+            What payment methods are available?
+            <span>
+              <i
+                class="hgi hgi-stroke hgi-arrow-up-01 arrow-up"
+                style="display: none"
+              ></i>
+              <i class="hgi hgi-stroke hgi-arrow-down-01 arrow-down"></i>
+            </span>
+          </h4>
+          <p class="faqtext" style="display: none">
+            You can reschedule or cancel a lesson from your dashboard.
+            Cancellation and rescheduling policies depend on the time before the
+            lesson and the tutor's settings.
+          </p>
+        </div>
+
+        <div class="faq-content">
+          <h4>
+            What happens if a student misses a session?
+            <span>
+              <i
+                class="hgi hgi-stroke hgi-arrow-up-01 arrow-up"
+                style="display: none"
+              ></i>
+              <i class="hgi hgi-stroke hgi-arrow-down-01 arrow-down"></i>
+            </span>
+          </h4>
+          <p class="faqtext" style="display: none">
+            You can reschedule or cancel a lesson from your dashboard.
+            Cancellation and rescheduling policies depend on the time before the
+            lesson and the tutor's settings.
+          </p>
+        </div>
+      </div>
     </section>
     <!-- Frequently Asked Questions Section Ends -->
-
-
 
     <!-- Join Kynda Section Starts -->
 
     <section id="join-sect">
-
-        <div class="join-cover">
-            <h3>Join 34,000+ learners who’ve grown with Kynda Team</h3>
-            <p>Let us help you take you from zero to serious business and beyond. <br> Our no-strings attached free trial lets you test our product today.</p>
-            <div class="join-btns">
-                <button class="join-btn-s">Join as a Student</button>
-                <button class="join-btn-t">Join as a Tutor</button>
-            </div>
+      <div class="join-cover">
+        <h3>Join 34,000+ learners who’ve grown with Kynda Team</h3>
+        <p>
+          Let us help you take you from zero to serious business and beyond.
+          <br />
+          Our no-strings attached free trial lets you test our product today.
+        </p>
+        <div class="join-btns">
+          <button class="join-btn-s">Join as a Student</button>
+          <button class="join-btn-t">Join as a Tutor</button>
         </div>
-
+      </div>
     </section>
     <!-- Join Kynda Section Ends -->
 
-
-
-
     <footer id="footer-section">
+      <!-- Top part of the Footer  -->
+      <div class="footerTop-container">
+        <!-- Box 1 -->
+        <div class="footer-content box1">
+          <div class="logo">
+            <img
+              src="Pages/LandingPage/images/footerLogo.png"
+              alt="Kynda logo"
+            />
+          </div>
 
-        <!-- Top part of the Footer  -->
-        <div class="footerTop-container">
-
-            <!-- Box 1 -->
-            <div class="footer-content box1">
-
-                <div class="logo">
-                    <img src="Pages/LandingPage/images/footerLogo.png" alt="Kynda logo">
-                </div>
-
-                <h4>Contact</h4>
-                <p><i class="fa-solid fa-phone"></i> Emergency Line: +1-800-SKY-HELP</p>
-                <p><i class="fa-solid fa-envelope"></i> infor@kynda.com</p>
-            </div>
-
-            <!-- box 2 -->
-            <div class="footer-content box2">
-                <h4>Quick Links</h4>
-                <p>Home</p>
-                <p>About</p>
-                <p>How it Works</p>
-                <p>For Parentes</p>
-                <p>For Tutors</p>
-            </div>
-
-            <!-- box 3 -->
-             <div class="footer-content box2">
-                <h4>Resources</h4>
-                <p>Learning Hub</p>
-                <p>Exam Prep Guides</p>
-            </div>
-
-            <!-- Box 4 -->
-             <div class="footer-content box2">
-                <h4>Legal</h4>
-                <p>Tutor Policy</p>
-                <p>Refund Policy</p>
-                <p>Contract Terms</p>
-            </div>
-
-            <!-- Box 5 -->
-             <div class="footer-content box2">
-                <h4>Help</h4>
-                <p>FAQ’s</p>
-                <p>Message Us</p>
-            </div>
-
+          <h4>Contact</h4>
+          <p>
+            <i class="fa-solid fa-phone"></i> Emergency Line: +1-800-SKY-HELP
+          </p>
+          <p><i class="fa-solid fa-envelope"></i> infor@kynda.com</p>
         </div>
 
-        <!-- Bottom Part of the Footer -->
-
-        <div class="footerBottom-container">
-
-            <div class="footerTermsContainer">
-                <p>&copy; 2025 Kynda. All Rights Reserved.</p>
-                <a href="#">Terms & Conditions</a>
-                <p>|</p>
-                <a href="#">Privacy & Policy</a>
-            </div>
-
-            <div class="footerSocialMediaLogos">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            </div>
-
+        <!-- box 2 -->
+        <div class="footer-content box2">
+          <h4>Quick Links</h4>
+          <p>Home</p>
+          <p>About</p>
+          <p>How it Works</p>
+          <p>For Parentes</p>
+          <p>For Tutors</p>
         </div>
 
+        <!-- box 3 -->
+        <div class="footer-content box2">
+          <h4>Resources</h4>
+          <p>Learning Hub</p>
+          <p>Exam Prep Guides</p>
+        </div>
+
+        <!-- Box 4 -->
+        <div class="footer-content box2">
+          <h4>Legal</h4>
+          <p>Tutor Policy</p>
+          <p>Refund Policy</p>
+          <p>Contract Terms</p>
+        </div>
+
+        <!-- Box 5 -->
+        <div class="footer-content box2">
+          <h4>Help</h4>
+          <p>FAQ’s</p>
+          <p>Message Us</p>
+        </div>
+      </div>
+
+      <!-- Bottom Part of the Footer -->
+
+      <div class="footerBottom-container">
+        <div class="footerTermsContainer">
+          <p>&copy; 2025 Kynda. All Rights Reserved.</p>
+          <a href="#">Terms & Conditions</a>
+          <p>|</p>
+          <a href="#">Privacy & Policy</a>
+        </div>
+
+        <div class="footerSocialMediaLogos">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
     </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- Frequently Ask Question Script -->
     <script>
-        // Make each FAQ item toggle independently
-        (function(){
-            var items = document.querySelectorAll('.faq-container .faq-content');
-            items.forEach(function(item){
-                var header = item.querySelector('h4');
-                var text = item.querySelector('.faqtext');
-                var arrowUp = item.querySelector('.arrow-up');
-                var arrowDown = item.querySelector('.arrow-down');
+      // Make each FAQ item toggle independently
+      (function () {
+        var items = document.querySelectorAll(".faq-container .faq-content");
+        items.forEach(function (item) {
+          var header = item.querySelector("h4");
+          var text = item.querySelector(".faqtext");
+          var arrowUp = item.querySelector(".arrow-up");
+          var arrowDown = item.querySelector(".arrow-down");
 
-                // Ensure initial state
-                if(text) text.style.display = 'none';
-                if(arrowUp) arrowUp.style.display = 'none';
-                if(arrowDown) arrowDown.style.display = 'inline-block';
+          // Ensure initial state
+          if (text) text.style.display = "none";
+          if (arrowUp) arrowUp.style.display = "none";
+          if (arrowDown) arrowDown.style.display = "inline-block";
 
-                // Click either the whole item or header toggles
-                var toggleFn = function(){
-                    var isOpen = text && text.style.display === 'block';
-                    if(text) text.style.display = isOpen ? 'none' : 'block';
-                    if(arrowUp) arrowUp.style.display = isOpen ? 'none' : 'inline-block';
-                    if(arrowDown) arrowDown.style.display = isOpen ? 'inline-block' : 'none';
-                };
+          // Click either the whole item or header toggles
+          var toggleFn = function () {
+            var isOpen = text && text.style.display === "block";
+            if (text) text.style.display = isOpen ? "none" : "block";
+            if (arrowUp)
+              arrowUp.style.display = isOpen ? "none" : "inline-block";
+            if (arrowDown)
+              arrowDown.style.display = isOpen ? "inline-block" : "none";
+          };
 
-                // Attach listeners
-                item.addEventListener('click', function(e){
-                    // Prevent clicks inside links or buttons from toggling
-                    var tag = e.target.tagName.toLowerCase();
-                    if(tag === 'a' || tag === 'button') return;
-                    toggleFn();
-                });
-                // Also allow header click specifically
-                if(header) header.style.cursor = 'pointer';
-            });
-        })();
+          // Attach listeners
+          item.addEventListener("click", function (e) {
+            // Prevent clicks inside links or buttons from toggling
+            var tag = e.target.tagName.toLowerCase();
+            if (tag === "a" || tag === "button") return;
+            toggleFn();
+          });
+          // Also allow header click specifically
+          if (header) header.style.cursor = "pointer";
+        });
+      })();
     </script>
 
-<script src="JS/main.js"></script>
+    <script src="JS/main.js"></script>
 
     <!-- ----- JavaScript for Mobile Navigation Toggle ----- -->
     <script src="/Pages/LandingPage/landing-navigation-toggle.js"></script>
-
-   
-</body>
+  </body>
 </html>
